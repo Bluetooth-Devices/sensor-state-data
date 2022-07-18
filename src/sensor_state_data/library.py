@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from enum import Enum
 
-from .description import SensorDescription
+from .description import BaseSensorDescription
 from .device_class import DeviceClass
 from .units import (
     ELECTRIC_POTENTIAL_VOLT,
@@ -17,28 +17,28 @@ from .units import (
 
 class SensorLibrary(Enum):
 
-    TEMPERATURE = SensorDescription(
+    TEMPERATURE = BaseSensorDescription(
         device_class=DeviceClass.TEMPERATURE, native_unit_of_measurement=TEMP_CELSIUS
     )
-    PRESSURE = SensorDescription(
+    PRESSURE = BaseSensorDescription(
         device_class=DeviceClass.PRESSURE, native_unit_of_measurement=PRESSURE_PA
     )
-    HUMIDITY = SensorDescription(
+    HUMIDITY = BaseSensorDescription(
         device_class=DeviceClass.HUMIDITY, native_unit_of_measurement=PERCENTAGE
     )
-    LIGHT = SensorDescription(
+    LIGHT = BaseSensorDescription(
         device_class=DeviceClass.ILLUMINANCE, native_unit_of_measurement=LIGHT_LUX
     )
-    VOLTAGE = SensorDescription(
+    VOLTAGE = BaseSensorDescription(
         device_class=DeviceClass.VOLTAGE,
         native_unit_of_measurement=ELECTRIC_POTENTIAL_VOLT,
     )
-    CURRENT = SensorDescription(
+    CURRENT = BaseSensorDescription(
         device_class=DeviceClass.CURRENT, native_unit_of_measurement=POWER_VOLT_AMPERE
     )
-    POWER = SensorDescription(
+    POWER = BaseSensorDescription(
         device_class=DeviceClass.POWER, native_unit_of_measurement=POWER_WATT
     )
-    BATTERY = SensorDescription(
+    BATTERY = BaseSensorDescription(
         device_class=DeviceClass.BATTERY, native_unit_of_measurement=PERCENTAGE
     )
