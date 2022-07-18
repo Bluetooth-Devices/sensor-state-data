@@ -1,14 +1,14 @@
 # Sensor State Data
 
 <p align="center">
-  <a href="https://github.com/bdraco/sensor-state-data/actions?query=workflow%3ACI">
-    <img src="https://img.shields.io/github/workflow/status/bdraco/sensor-state-data/CI/main?label=CI&logo=github&style=flat-square" alt="CI Status" >
+  <a href="https://github.com/bluetooth-devices/sensor-state-data/actions?query=workflow%3ACI">
+    <img src="https://img.shields.io/github/workflow/status/bluetooth-devices/sensor-state-data/CI/main?label=CI&logo=github&style=flat-square" alt="CI Status" >
   </a>
   <a href="https://sensor-state-data.readthedocs.io">
     <img src="https://img.shields.io/readthedocs/sensor-state-data.svg?logo=read-the-docs&logoColor=fff&style=flat-square" alt="Documentation Status">
   </a>
-  <a href="https://codecov.io/gh/bdraco/sensor-state-data">
-    <img src="https://img.shields.io/codecov/c/github/bdraco/sensor-state-data.svg?logo=codecov&logoColor=fff&style=flat-square" alt="Test coverage percentage">
+  <a href="https://codecov.io/gh/bluetooth-devices/sensor-state-data">
+    <img src="https://img.shields.io/codecov/c/github/bluetooth-devices/sensor-state-data.svg?logo=codecov&logoColor=fff&style=flat-square" alt="Test coverage percentage">
   </a>
 </p>
 <p align="center">
