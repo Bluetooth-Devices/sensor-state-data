@@ -1,4 +1,3 @@
-__version__ = "1.0.0"
 from typing import Final
 
 # These are currently the same as Home Assistant sensors

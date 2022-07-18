@@ -1,5 +1,3 @@
-__version__ = "1.0.0"
-
 # These are currently the same as Home Assistant sensors
 
 from .enum import StrEnum
