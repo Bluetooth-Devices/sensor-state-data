@@ -65,15 +65,15 @@ class SensorData:
 
     def update_predefined_sensor(
         self,
-        device_key: DeviceKey,
         base_description: BaseSensorDescription,
         native_value: None | str | int | float | date | datetime | Decimal,
         name: str | None = None,
         device_id: str | None = None,
     ) -> None:
         """Update a sensor by type."""
+        assert base_description.device_class is not None  # nosec
         self.update_sensor(
-            key=device_key.key,
+            key=base_description.device_class.value,
             name=name,
             native_unit_of_measurement=base_description.native_unit_of_measurement,
             native_value=native_value,
