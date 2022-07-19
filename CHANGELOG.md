@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.8.0 (2022-07-19)
+### Feature
+* Add the ability to set manufacturer/sw_version/hw_version ([#14](https://github.com/Bluetooth-Devices/sensor-state-data/issues/14)) ([`fef90fe`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/fef90fed29c1963ed00a75b9b6eaf78adcd34075))
+
 ## v1.7.0 (2022-07-19)
 ### Feature
 * Add title property ([#13](https://github.com/Bluetooth-Devices/sensor-state-data/issues/13)) ([`7aa2690`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/7aa26901f77a8ad4109465c6232d8ae9ea99432c))
