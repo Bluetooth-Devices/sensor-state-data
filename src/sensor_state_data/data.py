@@ -4,7 +4,7 @@ import dataclasses
 from abc import abstractmethod
 from datetime import date, datetime
 from decimal import Decimal
-from typing import Any
+from typing import Any, Final, TypedDict
 
 from .description import BaseSensorDescription, SensorDescription
 from .device import DeviceKey
@@ -12,11 +12,22 @@ from .device_class import DeviceClass
 from .value import SensorValue
 
 
+class SensorDeviceInfo(TypedDict, total=False):
+
+    name: str
+    model: str
+
+
+ATTR_NAME: Final = "name"
+ATTR_MODEL: Final = "model"
+
+
 @dataclasses.dataclass(frozen=True)
 class SensorUpdate:
 
-    descriptions: dict[DeviceKey, SensorDescription]
-    values: dict[DeviceKey, SensorValue]
+    devices: dict[str | None, SensorDeviceInfo]
+    entity_descriptions: dict[DeviceKey, SensorDescription]
+    entity_values: dict[DeviceKey, SensorValue]
 
 
 class SensorData:
@@ -25,6 +36,7 @@ class SensorData:
     def __init__(self) -> None:
         """Init a bluetooth device."""
         self._software_version: str | None = None
+        self._device_id_info: dict[str | None, SensorDeviceInfo] = {}
         self._device_id_to_name: dict[str | None, str] = {}
         self._device_id_to_type: dict[str | None, str] = {}
         self._descriptions: dict[DeviceKey, SensorDescription] = {}
@@ -42,10 +54,12 @@ class SensorData:
     def set_device_name(self, name: str, device_id: str | None = None) -> None:
         """Set the device name."""
         self._device_id_to_name[device_id] = name
+        self._device_id_info.setdefault(device_id, {})[ATTR_NAME] = name
 
     def set_device_type(self, device_type: str, device_id: str | None = None) -> None:
         """Set the device type."""
         self._device_id_to_type[device_id] = device_type
+        self._device_id_info.setdefault(device_id, {})[ATTR_MODEL] = device_type
 
     @abstractmethod
     def update(self, data: Any) -> None:
@@ -61,7 +75,11 @@ class SensorData:
         self.update(data)
         self._descriptions.update(self._descriptions_updates)
         self._values.update(self._values_updates)
-        return SensorUpdate(self._descriptions_updates, self._values_updates)
+        return SensorUpdate(
+            devices=self._device_id_info,
+            entity_descriptions=self._descriptions_updates,
+            entity_values=self._values_updates,
+        )
 
     def update_predefined_sensor(
         self,
