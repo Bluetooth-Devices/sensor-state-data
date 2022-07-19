@@ -1,4 +1,4 @@
-__version__ = "1.9.0"
+__version__ = "1.10.0"
 
 from .data import (
     ATTR_HW_VERSION,

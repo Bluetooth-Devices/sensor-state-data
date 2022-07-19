@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.10.0 (2022-07-19)
+### Feature
+* Export consts ([#16](https://github.com/Bluetooth-Devices/sensor-state-data/issues/16)) ([`177db6f`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/177db6f84519c2817bd891b8ad8ae2cb13414cd1))
+
 ## v1.9.0 (2022-07-19)
 ### Feature
 * Allow setting the key for a predefined sensor ([#15](https://github.com/Bluetooth-Devices/sensor-state-data/issues/15)) ([`519b4e2`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/519b4e28d4d41f5ed24f326ae17507fc3321534a))
