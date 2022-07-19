@@ -62,17 +62,20 @@ class SensorData:
         self._device_id_info.setdefault(device_id, {})[ATTR_MODEL] = device_type
 
     @abstractmethod
-    def update(self, data: Any) -> None:
+    def _update_from_data(self, data: Any) -> None:
         """Update the data."""
 
     def supported(self, data: Any) -> bool:
         """Return True if the device is supported."""
-        self.generate_update(data)
+        self._update_from_data(data)
         return bool(self._device_id_to_type)
 
-    def generate_update(self, data: Any) -> SensorUpdate:
-        """Update a bluetooth device."""
-        self.update(data)
+    def update(self, data: Any) -> SensorUpdate:
+        """Update a device."""
+        self._update_from_data(data)
+        return self._finish_update()
+
+    def _finish_update(self) -> SensorUpdate:
         self._descriptions.update(self._descriptions_updates)
         self._values.update(self._values_updates)
         return SensorUpdate(
