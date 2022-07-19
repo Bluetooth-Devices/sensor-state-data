@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.4.1 (2022-07-19)
+### Fix
+* Sensor library should not be an enum ([#9](https://github.com/Bluetooth-Devices/sensor-state-data/issues/9)) ([`bed9997`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/bed9997e57f073e581c26329629ef0e05f8980c3))
+
 ## v1.4.0 (2022-07-19)
 ### Feature
 * Update format ([#8](https://github.com/Bluetooth-Devices/sensor-state-data/issues/8)) ([`f8e4cdc`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/f8e4cdcacb415fd5c446e1ec263b19397c49b840))
