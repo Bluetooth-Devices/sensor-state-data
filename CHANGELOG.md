@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.4.0 (2022-07-19)
+### Feature
+* Update format ([#8](https://github.com/Bluetooth-Devices/sensor-state-data/issues/8)) ([`f8e4cdc`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/f8e4cdcacb415fd5c446e1ec263b19397c49b840))
+
 ## v1.3.1 (2022-07-18)
 ### Fix
 * Refactor update_predefined_sensor ([#7](https://github.com/Bluetooth-Devices/sensor-state-data/issues/7)) ([`3e10e0e`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/3e10e0e20c274cb7f334ed8590d90d7fb10c622d))
