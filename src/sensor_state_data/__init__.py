@@ -1,6 +1,6 @@
 __version__ = "1.5.0"
 
-from .data import SensorData, SensorUpdate
+from .data import SensorData, SensorDeviceInfo, SensorUpdate
 from .description import SensorDescription
 from .device import DeviceKey
 from .device_class import DeviceClass
@@ -12,7 +12,7 @@ __all__ = [
     "DeviceKey",
     "SensorData",
     "SensorDescription",
-    "SensorDescription",
+    "SensorDeviceInfo",
     "SensorLibrary",
     "SensorUpdate",
     "SensorValue",
