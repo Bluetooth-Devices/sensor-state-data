@@ -25,6 +25,7 @@ ATTR_MODEL: Final = "model"
 @dataclasses.dataclass(frozen=True)
 class SensorUpdate:
 
+    title: str | None
     devices: dict[str | None, SensorDeviceInfo]
     entity_descriptions: dict[DeviceKey, SensorDescription]
     entity_values: dict[DeviceKey, SensorValue]
@@ -34,7 +35,8 @@ class SensorData:
     """Generate a sensor update."""
 
     def __init__(self) -> None:
-        """Init a bluetooth device."""
+        """Init sensor data."""
+        self._title: str | None = None
         self._software_version: str | None = None
         self._device_id_info: dict[str | None, SensorDeviceInfo] = {}
         self._device_id_to_name: dict[str | None, str] = {}
@@ -57,6 +59,15 @@ class SensorData:
         if self._device_id_to_type:
             return list(self._device_id_to_type)[0]
         return None
+
+    @property
+    def title(self) -> str | None:
+        """Return the title."""
+        return self._title
+
+    def set_title(self, title: str) -> None:
+        """Set the title."""
+        self._title = title
 
     def set_device_name(self, name: str, device_id: str | None = None) -> None:
         """Set the device name."""
@@ -86,6 +97,7 @@ class SensorData:
         self._descriptions.update(self._descriptions_updates)
         self._values.update(self._values_updates)
         return SensorUpdate(
+            title=self._title,
             devices=self._device_id_info,
             entity_descriptions=self._descriptions_updates,
             entity_values=self._values_updates,
