@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.11.0 (2022-07-19)
+### Feature
+* Rename _update_from_data to _start_update ([#17](https://github.com/Bluetooth-Devices/sensor-state-data/issues/17)) ([`3235362`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/3235362010113fd2a1903ede58fa39ce5854c38a))
+
 ## v1.10.0 (2022-07-19)
 ### Feature
 * Export consts ([#16](https://github.com/Bluetooth-Devices/sensor-state-data/issues/16)) ([`177db6f`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/177db6f84519c2817bd891b8ad8ae2cb13414cd1))
