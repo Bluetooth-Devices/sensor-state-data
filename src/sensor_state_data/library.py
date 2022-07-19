@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from enum import Enum
-
 from .description import BaseSensorDescription
 from .device_class import DeviceClass
 from .units import (
@@ -15,7 +13,8 @@ from .units import (
 )
 
 
-class SensorLibrary(Enum):
+class SensorLibrary:
+    """A library of sensor common descriptions."""
 
     TEMPERATURE = BaseSensorDescription(
         device_class=DeviceClass.TEMPERATURE, native_unit_of_measurement=TEMP_CELSIUS
