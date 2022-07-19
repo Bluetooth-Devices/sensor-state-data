@@ -51,6 +51,13 @@ class SensorData:
         """Return the data."""
         return self._descriptions
 
+    @property
+    def primary_device_id(self) -> str | None:
+        """Return the primary device id."""
+        if self._device_id_to_type:
+            return list(self._device_id_to_type)[0]
+        return None
+
     def set_device_name(self, name: str, device_id: str | None = None) -> None:
         """Set the device name."""
         self._device_id_to_name[device_id] = name
