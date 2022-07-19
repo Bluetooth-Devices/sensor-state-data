@@ -104,17 +104,17 @@ class SensorData:
         self._device_id_info.setdefault(device_id, {})[ATTR_MODEL] = device_type
 
     @abstractmethod
-    def _update_from_data(self, data: Any) -> None:
+    def _start_update(self, data: Any) -> None:
         """Update the data."""
 
     def supported(self, data: Any) -> bool:
         """Return True if the device is supported."""
-        self._update_from_data(data)
+        self._start_update(data)
         return bool(self._device_id_to_type)
 
     def update(self, data: Any) -> SensorUpdate:
         """Update a device."""
-        self._update_from_data(data)
+        self._start_update(data)
         return self._finish_update()
 
     def _finish_update(self) -> SensorUpdate:
