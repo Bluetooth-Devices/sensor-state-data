@@ -1,4 +1,4 @@
-__version__ = "1.6.0"
+__version__ = "1.7.0"
 
 from .data import SensorData, SensorDeviceInfo, SensorUpdate
 from .description import SensorDescription
