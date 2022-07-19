@@ -16,10 +16,16 @@ class SensorDeviceInfo(TypedDict, total=False):
 
     name: str
     model: str
+    manufacturer: str
+    sw_version: str
+    hw_version: str
 
 
 ATTR_NAME: Final = "name"
 ATTR_MODEL: Final = "model"
+ATTR_MANUFACTURER: Final = "manufacturer"
+ATTR_SW_VERSION: Final = "sw_version"
+ATTR_HW_VERSION: Final = "hw_version"
 
 
 @dataclasses.dataclass(frozen=True)
@@ -68,6 +74,24 @@ class SensorData:
     def set_title(self, title: str) -> None:
         """Set the title."""
         self._title = title
+
+    def set_device_manufacturer(
+        self, manufacturer: str, device_id: str | None = None
+    ) -> None:
+        """Set the device manufacturer."""
+        self._device_id_info.setdefault(device_id, {})[ATTR_MANUFACTURER] = manufacturer
+
+    def set_device_hw_version(
+        self, hw_version: str, device_id: str | None = None
+    ) -> None:
+        """Set the device hardware version."""
+        self._device_id_info.setdefault(device_id, {})[ATTR_HW_VERSION] = hw_version
+
+    def set_device_sw_version(
+        self, sw_version: str, device_id: str | None = None
+    ) -> None:
+        """Set the device software version."""
+        self._device_id_info.setdefault(device_id, {})[ATTR_SW_VERSION] = sw_version
 
     def set_device_name(self, name: str, device_id: str | None = None) -> None:
         """Set the device name."""
