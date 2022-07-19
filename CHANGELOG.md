@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.6.0 (2022-07-19)
+### Feature
+* Add primary_device_id property ([#12](https://github.com/Bluetooth-Devices/sensor-state-data/issues/12)) ([`6ee964b`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/6ee964b98b144a6f7c1e78444972e4759ee6223e))
+
 ## v1.5.1 (2022-07-19)
 ### Fix
 * Fix __all__ ([#11](https://github.com/Bluetooth-Devices/sensor-state-data/issues/11)) ([`6f99e5f`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/6f99e5f6f3c3021ad320527e3024f5dbcb6186aa))
