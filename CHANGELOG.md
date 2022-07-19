@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.9.0 (2022-07-19)
+### Feature
+* Allow setting the key for a predefined sensor ([#15](https://github.com/Bluetooth-Devices/sensor-state-data/issues/15)) ([`519b4e2`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/519b4e28d4d41f5ed24f326ae17507fc3321534a))
+
 ## v1.8.0 (2022-07-19)
 ### Feature
 * Add the ability to set manufacturer/sw_version/hw_version ([#14](https://github.com/Bluetooth-Devices/sensor-state-data/issues/14)) ([`fef90fe`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/fef90fed29c1963ed00a75b9b6eaf78adcd34075))
