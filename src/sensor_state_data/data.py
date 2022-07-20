@@ -148,7 +148,7 @@ class SensorData:
 
     def _get_key_name(self, key: str, device_id: str | None = None) -> str:
         """Set the device name."""
-        return key.title()
+        return key.replace("_", " ").title()
 
     def get_device_name(self, device_id: str | None = None) -> str | None:
         """Get the device name."""
