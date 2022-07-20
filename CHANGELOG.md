@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v1.11.1 (2022-07-20)
+### Fix
+* Adjust naming to account for _s ([#19](https://github.com/Bluetooth-Devices/sensor-state-data/issues/19)) ([`ab600f5`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/ab600f51294510418b1502d72dfc84f88944c535))
+* Do not prefix device name since hass will use entity_name ([#18](https://github.com/Bluetooth-Devices/sensor-state-data/issues/18)) ([`728be53`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/728be53bd3767b1f7c0a1f79ba37950cb7a13e2d))
+
 ## v1.11.0 (2022-07-19)
 ### Feature
 * Rename _update_from_data to _start_update ([#17](https://github.com/Bluetooth-Devices/sensor-state-data/issues/17)) ([`3235362`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/3235362010113fd2a1903ede58fa39ce5854c38a))
