@@ -148,8 +148,6 @@ class SensorData:
 
     def _get_key_name(self, key: str, device_id: str | None = None) -> str:
         """Set the device name."""
-        if device_name := self.get_device_name(device_id):
-            return f"{device_name} {key.title()}"
         return key.title()
 
     def get_device_name(self, device_id: str | None = None) -> str | None:
