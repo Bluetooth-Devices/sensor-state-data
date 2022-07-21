@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v2.0.0 (2022-07-21)
+### Feature
+* Refactor to split name and units ([#20](https://github.com/Bluetooth-Devices/sensor-state-data/issues/20)) ([`e06c200`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/e06c20084ea106a2e9c6e506953c210bd90d0d10))
+
+### Breaking
+* Library has changed to have units ([`e06c200`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/e06c20084ea106a2e9c6e506953c210bd90d0d10))
+* name is now moved to SensorValue ([`e06c200`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/e06c20084ea106a2e9c6e506953c210bd90d0d10))
+* SensorDeviceInfo is now a dataclass ([`e06c200`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/e06c20084ea106a2e9c6e506953c210bd90d0d10))
+* Units are now an str enum ([`e06c200`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/e06c20084ea106a2e9c6e506953c210bd90d0d10))
+
 ## v1.11.1 (2022-07-20)
 ### Fix
 * Adjust naming to account for _s ([#19](https://github.com/Bluetooth-Devices/sensor-state-data/issues/19)) ([`ab600f5`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/ab600f51294510418b1502d72dfc84f88944c535))
