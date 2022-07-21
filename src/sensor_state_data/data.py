@@ -97,10 +97,12 @@ class SensorData:
 
     def set_device_name(self, name: str, device_id: str | None = None) -> None:
         """Set the device name."""
+        self._device_id_to_name[device_id] = name
         self._get_device_info(device_id).name = name
 
     def set_device_type(self, device_type: str, device_id: str | None = None) -> None:
         """Set the device type."""
+        self._device_id_to_type[device_id] = device_type
         self._get_device_info(device_id).model = device_type
 
     @abstractmethod
