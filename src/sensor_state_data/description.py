@@ -17,7 +17,6 @@ class BaseSensorDescription:
 class SensorDescriptionIds:
 
     device_key: DeviceKey
-    name: str | None = None
 
 
 @dataclass(frozen=True)

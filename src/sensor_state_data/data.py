@@ -4,7 +4,7 @@ import dataclasses
 from abc import abstractmethod
 from datetime import date, datetime
 from decimal import Decimal
-from typing import Any, Final, TypedDict
+from typing import Any
 
 from .description import BaseSensorDescription, SensorDescription
 from .device import DeviceKey
@@ -12,20 +12,14 @@ from .device_class import DeviceClass
 from .value import SensorValue
 
 
-class SensorDeviceInfo(TypedDict, total=False):
+@dataclasses.dataclass(frozen=False)
+class SensorDeviceInfo:
 
-    name: str
-    model: str
-    manufacturer: str
-    sw_version: str
-    hw_version: str
-
-
-ATTR_NAME: Final = "name"
-ATTR_MODEL: Final = "model"
-ATTR_MANUFACTURER: Final = "manufacturer"
-ATTR_SW_VERSION: Final = "sw_version"
-ATTR_HW_VERSION: Final = "hw_version"
+    name: str | None
+    model: str | None
+    manufacturer: str | None
+    sw_version: str | None
+    hw_version: str | None
 
 
 @dataclasses.dataclass(frozen=True)
@@ -75,33 +69,39 @@ class SensorData:
         """Set the title."""
         self._title = title
 
+    def _get_device_info(self, device_id: str | None) -> SensorDeviceInfo:
+        """Get device info."""
+        if device_id not in self._device_id_info:
+            self._device_id_info[device_id] = SensorDeviceInfo(
+                None, None, None, None, None
+            )
+        return self._device_id_info[device_id]
+
     def set_device_manufacturer(
         self, manufacturer: str, device_id: str | None = None
     ) -> None:
         """Set the device manufacturer."""
-        self._device_id_info.setdefault(device_id, {})[ATTR_MANUFACTURER] = manufacturer
+        self._get_device_info(device_id).manufacturer = manufacturer
 
     def set_device_hw_version(
         self, hw_version: str, device_id: str | None = None
     ) -> None:
         """Set the device hardware version."""
-        self._device_id_info.setdefault(device_id, {})[ATTR_HW_VERSION] = hw_version
+        self._get_device_info(device_id).hw_version = hw_version
 
     def set_device_sw_version(
         self, sw_version: str, device_id: str | None = None
     ) -> None:
         """Set the device software version."""
-        self._device_id_info.setdefault(device_id, {})[ATTR_SW_VERSION] = sw_version
+        self._get_device_info(device_id).sw_version = sw_version
 
     def set_device_name(self, name: str, device_id: str | None = None) -> None:
         """Set the device name."""
-        self._device_id_to_name[device_id] = name
-        self._device_id_info.setdefault(device_id, {})[ATTR_NAME] = name
+        self._get_device_info(device_id).name = name
 
     def set_device_type(self, device_type: str, device_id: str | None = None) -> None:
         """Set the device type."""
-        self._device_id_to_type[device_id] = device_type
-        self._device_id_info.setdefault(device_id, {})[ATTR_MODEL] = device_type
+        self._get_device_info(device_id).model = device_type
 
     @abstractmethod
     def _start_update(self, data: Any) -> None:
@@ -168,12 +168,12 @@ class SensorData:
         """Update a sensor."""
         device_key = DeviceKey(key, device_id)
         self._values_updates[device_key] = SensorValue(
+            name=name or self._get_key_name(key, device_id),
             device_key=device_key,
             native_value=native_value,
         )
         self._descriptions_updates[device_key] = SensorDescription(
             device_key=device_key,
-            name=name or self._get_key_name(key, device_id),
             native_unit_of_measurement=native_unit_of_measurement,
             device_class=device_class,
         )

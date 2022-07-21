@@ -12,4 +12,5 @@ class SensorValue:
     """A class that describes sensor values."""
 
     device_key: DeviceKey
+    name: str
     native_value: None | str | int | float | date | datetime | Decimal
