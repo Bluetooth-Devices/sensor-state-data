@@ -4,13 +4,14 @@ from dataclasses import dataclass
 
 from .device import DeviceKey
 from .device_class import DeviceClass
+from .units import Units
 
 
 @dataclass(frozen=True)
 class BaseSensorDescription:
 
     device_class: DeviceClass | None = None
-    native_unit_of_measurement: str | None = None
+    native_unit_of_measurement: Units | None = None
 
 
 @dataclass(frozen=True)

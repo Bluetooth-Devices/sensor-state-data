@@ -9,6 +9,7 @@ from typing import Any
 from .description import BaseSensorDescription, SensorDescription
 from .device import DeviceKey
 from .device_class import DeviceClass
+from .units import Units
 from .value import SensorValue
 
 
@@ -161,7 +162,7 @@ class SensorData:
     def update_sensor(
         self,
         key: str,
-        native_unit_of_measurement: str | None,
+        native_unit_of_measurement: Units | None,
         native_value: None | str | int | float | date | datetime | Decimal,
         device_class: DeviceClass | None = None,
         name: str | None = None,
