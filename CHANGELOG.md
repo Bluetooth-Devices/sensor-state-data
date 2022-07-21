@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.0.1 (2022-07-21)
+### Fix
+* Name and device type were not being set from refactor ([#21](https://github.com/Bluetooth-Devices/sensor-state-data/issues/21)) ([`2badc47`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/2badc471e96493437f7eea3bc8629894edd79217))
+
 ## v2.0.0 (2022-07-21)
 ### Feature
 * Refactor to split name and units ([#20](https://github.com/Bluetooth-Devices/sensor-state-data/issues/20)) ([`e06c200`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/e06c20084ea106a2e9c6e506953c210bd90d0d10))
