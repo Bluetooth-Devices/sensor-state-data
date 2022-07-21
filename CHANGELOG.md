@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.0.2 (2022-07-21)
+### Fix
+* Typing on native_unit_of_measurement ([#22](https://github.com/Bluetooth-Devices/sensor-state-data/issues/22)) ([`9815b3d`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/9815b3d679fb0f4416f4919c4246c45e7bed6806))
+
 ## v2.0.1 (2022-07-21)
 ### Fix
 * Name and device type were not being set from refactor ([#21](https://github.com/Bluetooth-Devices/sensor-state-data/issues/21)) ([`2badc47`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/2badc471e96493437f7eea3bc8629894edd79217))
