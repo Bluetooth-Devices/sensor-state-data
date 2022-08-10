@@ -13,4 +13,4 @@ class SensorValue:
 
     device_key: DeviceKey
     name: str
-    native_value: None | str | int | float | date | datetime | Decimal
+    native_value: None | bool | str | int | float | date | datetime | Decimal
