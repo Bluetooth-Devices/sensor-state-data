@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from .base import BaseDeviceClass
 from .binary_sensor.device_class import BinarySensorDeviceClass
 from .device import DeviceKey
 from .sensor.device_class import SensorDeviceClass
@@ -13,7 +14,7 @@ class BaseDescription:
     """A base class for all descriptions."""
 
     native_unit_of_measurement: Units | None = None
-    device_class: BinarySensorDeviceClass | SensorDeviceClass | None = None
+    device_class: BaseDeviceClass | None = None
 
 
 @dataclass(frozen=True)

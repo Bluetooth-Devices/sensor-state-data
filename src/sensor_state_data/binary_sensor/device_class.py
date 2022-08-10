@@ -1,9 +1,9 @@
 # These are currently the same as Home Assistant binary sensors
 
-from ..enum import StrEnum
+from ..base import BaseDeviceClass
 
 
-class BinarySensorDeviceClass(StrEnum):
+class BinarySensorDeviceClass(BaseDeviceClass):
     """Device class for binary sensors."""
 
     # On means low, Off means normal
