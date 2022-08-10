@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import dataclasses
 from abc import abstractmethod
-from collections.abc import MutableMapping
 from datetime import date, datetime
 from decimal import Decimal
 from typing import Any
@@ -11,13 +10,12 @@ from .binary_sensor.device_class import BinarySensorDeviceClass
 from .description import (
     BaseSensorDescription,
     BinarySensorDescription,
-    KeyedBaseDescription,
     SensorDescription,
 )
 from .device import DeviceKey
 from .sensor.device_class import SensorDeviceClass
 from .units import Units
-from .value import SensorValue
+from .value import BinarySensorValue, SensorValue
 
 
 @dataclasses.dataclass(frozen=False)
@@ -35,8 +33,10 @@ class SensorUpdate:
 
     title: str | None
     devices: dict[str | None, SensorDeviceInfo]
-    entity_descriptions: MutableMapping[DeviceKey, KeyedBaseDescription]
+    entity_descriptions: dict[DeviceKey, SensorDescription]
     entity_values: dict[DeviceKey, SensorValue]
+    binary_entity_descriptions: dict[DeviceKey, BinarySensorDescription]
+    binary_entity_values: dict[DeviceKey, BinarySensorValue]
 
 
 class SensorData:
@@ -49,17 +49,34 @@ class SensorData:
         self._device_id_info: dict[str | None, SensorDeviceInfo] = {}
         self._device_id_to_name: dict[str | None, str] = {}
         self._device_id_to_type: dict[str | None, str] = {}
-        self._descriptions: MutableMapping[DeviceKey, KeyedBaseDescription] = {}
-        self._descriptions_updates: MutableMapping[DeviceKey, KeyedBaseDescription] = {}
-        self._values: dict[DeviceKey, SensorValue] = {}
-        self._values_updates: dict[DeviceKey, SensorValue] = {}
+
+        # Sensors
+        self._sensor_descriptions: dict[DeviceKey, SensorDescription] = {}
+        self._sensor_descriptions_updates: dict[DeviceKey, SensorDescription] = {}
+        self._sensor_values: dict[DeviceKey, SensorValue] = {}
+        self._sensor_values_updates: dict[DeviceKey, SensorValue] = {}
+
+        # Binary Sensors
+        self._binary_sensor_descriptions: dict[DeviceKey, BinarySensorDescription] = {}
+        self._binary_sensor_descriptions_updates: dict[
+            DeviceKey, BinarySensorDescription
+        ] = {}
+        self._binary_sensor_values: dict[DeviceKey, BinarySensorValue] = {}
+        self._binary_sensor_values_updates: dict[DeviceKey, BinarySensorValue] = {}
 
     @property
     def descriptions(
         self,
-    ) -> MutableMapping[DeviceKey, KeyedBaseDescription]:
-        """Return the data."""
-        return self._descriptions
+    ) -> dict[DeviceKey, SensorDescription]:
+        """Return the sensor data."""
+        return self._sensor_descriptions
+
+    @property
+    def binary_descriptions(
+        self,
+    ) -> dict[DeviceKey, BinarySensorDescription]:
+        """Return the binary sensor data."""
+        return self._binary_sensor_descriptions
 
     @property
     def primary_device_id(self) -> str | None:
@@ -128,13 +145,22 @@ class SensorData:
         return self._finish_update()
 
     def _finish_update(self) -> SensorUpdate:
-        self._descriptions.update(self._descriptions_updates)
-        self._values.update(self._values_updates)
+        """Finish the update."""
+        self._sensor_descriptions.update(self._sensor_descriptions_updates)
+        self._sensor_values.update(self._sensor_values_updates)
+
+        self._binary_sensor_descriptions.update(
+            self._binary_sensor_descriptions_updates
+        )
+        self._binary_sensor_values.update(self._binary_sensor_values_updates)
+
         return SensorUpdate(
             title=self._title,
             devices=self._device_id_info,
-            entity_descriptions=self._descriptions_updates,
-            entity_values=self._values_updates,
+            entity_descriptions=self._sensor_descriptions_updates,
+            entity_values=self._sensor_values_updates,
+            binary_entity_descriptions=self._binary_sensor_descriptions_updates,
+            binary_entity_values=self._binary_sensor_values_updates,
         )
 
     def update_predefined_sensor(
@@ -166,12 +192,12 @@ class SensorData:
     ) -> None:
         """Update a sensor by type."""
         device_key = DeviceKey(key, device_id)
-        self._values_updates[device_key] = SensorValue(
+        self._binary_sensor_values_updates[device_key] = BinarySensorValue(
             name=name or self._get_key_name(key, device_id),
             device_key=device_key,
             native_value=native_value,
         )
-        self._descriptions_updates[device_key] = BinarySensorDescription(
+        self._binary_sensor_descriptions_updates[device_key] = BinarySensorDescription(
             device_key=device_key,
             device_class=device_class,
         )
@@ -197,12 +223,12 @@ class SensorData:
     ) -> None:
         """Update a sensor."""
         device_key = DeviceKey(key, device_id)
-        self._values_updates[device_key] = SensorValue(
+        self._sensor_values_updates[device_key] = SensorValue(
             name=name or self._get_key_name(key, device_id),
             device_key=device_key,
             native_value=native_value,
         )
-        self._descriptions_updates[device_key] = SensorDescription(
+        self._sensor_descriptions_updates[device_key] = SensorDescription(
             device_key=device_key,
             native_unit_of_measurement=native_unit_of_measurement,
             device_class=device_class,

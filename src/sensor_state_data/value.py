@@ -8,9 +8,21 @@ from .device import DeviceKey
 
 
 @dataclass(frozen=True)
-class SensorValue:
-    """A class that describes sensor values."""
+class BaseValue:
 
     device_key: DeviceKey
     name: str
-    native_value: None | bool | str | int | float | date | datetime | Decimal
+
+
+@dataclass(frozen=True)
+class SensorValue(BaseValue):
+    """A class that describes sensor values."""
+
+    native_value: str | int | float | date | datetime | Decimal | None
+
+
+@dataclass(frozen=True)
+class BinarySensorValue(BaseValue):
+    """A class that describes sensor values."""
+
+    native_value: bool | None
