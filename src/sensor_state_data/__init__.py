@@ -9,10 +9,12 @@ from .library import SensorLibrary
 from .sensor.device_class import SensorDeviceClass
 from .sensor.device_class import SensorDeviceClass as DeviceClass
 from .units import Units
-from .value import SensorValue
+from .value import BaseValue, BinarySensorValue, SensorValue
 
 __all__ = [
     "BaseDeviceClass",
+    "BaseValue",
+    "BinarySensorValue",
     "BinarySensorDeviceClass",
     "DeviceClass",
     "DeviceKey",
