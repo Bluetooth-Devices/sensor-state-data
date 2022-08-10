@@ -1,5 +1,6 @@
 __version__ = "2.0.2"
 
+from .base import BaseDeviceClass
 from .binary_sensor.device_class import BinarySensorDeviceClass
 from .data import SensorData, SensorDeviceInfo, SensorUpdate
 from .description import SensorDescription
@@ -11,6 +12,7 @@ from .units import Units
 from .value import SensorValue
 
 __all__ = [
+    "BaseDeviceClass",
     "BinarySensorDeviceClass",
     "DeviceClass",
     "DeviceKey",
