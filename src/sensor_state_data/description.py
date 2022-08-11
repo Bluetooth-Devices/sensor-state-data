@@ -14,6 +14,7 @@ class BaseDescription:
     """A base class for all descriptions."""
 
     device_class: BaseDeviceClass | None = None
+    native_unit_of_measurement: Units | None = None
 
 
 @dataclass(frozen=True)
@@ -26,7 +27,6 @@ class BaseBinarySensorDescription(BaseDescription):
 class BaseSensorDescription(BaseDescription):
 
     device_class: SensorDeviceClass | None = None
-    native_unit_of_measurement: Units | None = None
 
 
 @dataclass(frozen=True)
