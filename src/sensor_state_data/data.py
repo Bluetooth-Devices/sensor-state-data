@@ -163,6 +163,24 @@ class SensorData:
             binary_entity_values=self._binary_sensor_values_updates,
         )
 
+    def update_predefined_binary_sensor(
+        self,
+        device_class: BinarySensorDeviceClass,
+        native_value: bool | None,
+        key: str | None = None,
+        name: str | None = None,
+        device_id: str | None = None,
+    ) -> None:
+        """Update a binary sensor by type."""
+        assert device_class is not None  # nosec
+        self.update_binary_sensor(
+            key=key or device_class.value,
+            name=name,
+            native_value=native_value,
+            device_class=device_class,
+            device_id=device_id,
+        )
+
     def update_predefined_sensor(
         self,
         base_description: BaseSensorDescription,
@@ -180,6 +198,16 @@ class SensorData:
             native_value=native_value,
             device_class=base_description.device_class,
             device_id=device_id,
+        )
+
+    def _get_key_name(self, key: str, device_id: str | None = None) -> str:
+        """Set the device name."""
+        return key.replace("_", " ").title()
+
+    def get_device_name(self, device_id: str | None = None) -> str | None:
+        """Get the device name."""
+        return self._device_id_to_name.get(device_id) or self._device_id_to_type.get(
+            device_id
         )
 
     def update_binary_sensor(
@@ -200,16 +228,6 @@ class SensorData:
         self._binary_sensor_descriptions_updates[device_key] = BinarySensorDescription(
             device_key=device_key,
             device_class=device_class,
-        )
-
-    def _get_key_name(self, key: str, device_id: str | None = None) -> str:
-        """Set the device name."""
-        return key.replace("_", " ").title()
-
-    def get_device_name(self, device_id: str | None = None) -> str | None:
-        """Get the device name."""
-        return self._device_id_to_name.get(device_id) or self._device_id_to_type.get(
-            device_id
         )
 
     def update_sensor(
