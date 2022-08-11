@@ -13,7 +13,6 @@ from .units import Units
 class BaseDescription:
     """A base class for all descriptions."""
 
-    native_unit_of_measurement: Units | None = None
     device_class: BaseDeviceClass | None = None
 
 
@@ -26,6 +25,7 @@ class BaseBinarySensorDescription(BaseDescription):
 @dataclass(frozen=True)
 class BaseSensorDescription(BaseDescription):
 
+    native_unit_of_measurement: Units | None = None
     device_class: SensorDeviceClass | None = None
 
 
