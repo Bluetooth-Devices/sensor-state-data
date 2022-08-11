@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.1.2 (2022-08-11)
+### Fix
+* Export BinarySensorDescription ([#25](https://github.com/Bluetooth-Devices/sensor-state-data/issues/25)) ([`ecc7331`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/ecc73310db03f40b0e78d27a6ab0aa7f665f4f18))
+
 ## v2.1.1 (2022-08-11)
 ### Fix
 * Add default factories for descriptions and values ([#24](https://github.com/Bluetooth-Devices/sensor-state-data/issues/24)) ([`519ac61`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/519ac61debf227ed36cd4855a3c77cc4c6db5432))
