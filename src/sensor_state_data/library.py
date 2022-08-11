@@ -52,3 +52,7 @@ class SensorLibrary:
         device_class=SensorDeviceClass.PM25,
         native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
     )
+    CO2__CONCENTRATION_PARTS_PER_MILLION = BaseSensorDescription(
+        device_class=SensorDeviceClass.CO2,
+        native_unit_of_measurement=Units.CONCENTRATION_PARTS_PER_MILLION,
+    )
