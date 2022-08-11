@@ -33,10 +33,18 @@ class SensorUpdate:
 
     title: str | None
     devices: dict[str | None, SensorDeviceInfo]
-    entity_descriptions: dict[DeviceKey, SensorDescription]
-    entity_values: dict[DeviceKey, SensorValue]
-    binary_entity_descriptions: dict[DeviceKey, BinarySensorDescription]
-    binary_entity_values: dict[DeviceKey, BinarySensorValue]
+    entity_descriptions: dict[DeviceKey, SensorDescription] = dataclasses.field(
+        default_factory=dict
+    )
+    entity_values: dict[DeviceKey, SensorValue] = dataclasses.field(
+        default_factory=dict
+    )
+    binary_entity_descriptions: dict[
+        DeviceKey, BinarySensorDescription
+    ] = dataclasses.field(default_factory=dict)
+    binary_entity_values: dict[DeviceKey, BinarySensorValue] = dataclasses.field(
+        default_factory=dict
+    )
 
 
 class SensorData:
