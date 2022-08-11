@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.1.0 (2022-08-11)
+### Feature
+* Add support for binary sensors ([#23](https://github.com/Bluetooth-Devices/sensor-state-data/issues/23)) ([`902fb76`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/902fb7624d51627bd02e190f67d3234a17d4615a))
+
 ## v2.0.2 (2022-07-21)
 ### Fix
 * Typing on native_unit_of_measurement ([#22](https://github.com/Bluetooth-Devices/sensor-state-data/issues/22)) ([`9815b3d`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/9815b3d679fb0f4416f4919c4246c45e7bed6806))
