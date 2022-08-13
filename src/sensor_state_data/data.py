@@ -17,6 +17,8 @@ from .sensor.device_class import SensorDeviceClass
 from .units import Units
 from .value import BinarySensorValue, SensorValue
 
+_PRECISION_SENTINEL = -1
+
 
 @dataclasses.dataclass(frozen=False)
 class SensorDeviceInfo:
@@ -53,6 +55,7 @@ class SensorData:
     def __init__(self) -> None:
         """Init sensor data."""
         self._title: str | None = None
+        self._precision = _PRECISION_SENTINEL
         self._software_version: str | None = None
         self._device_id_info: dict[str | None, SensorDeviceInfo] = {}
         self._device_id_to_name: dict[str | None, str] = {}
@@ -94,6 +97,11 @@ class SensorData:
         return None
 
     @property
+    def precision(self) -> int:
+        """Return the precision in decimal places."""
+        return self._precision
+
+    @property
     def title(self) -> str | None:
         """Return the title."""
         return self._title
@@ -101,6 +109,16 @@ class SensorData:
     def set_title(self, title: str) -> None:
         """Set the title."""
         self._title = title
+
+    def set_precision(self, precision: int) -> None:
+        """Set the precision in decimal places.
+
+        This is a convenience method to have native float values
+        rounded to the expected number of decimal places.
+        """
+        if precision < 0:
+            self._precision = _PRECISION_SENTINEL
+        self._precision = precision
 
     def _get_device_info(self, device_id: str | None) -> SensorDeviceInfo:
         """Get device info."""
@@ -249,6 +267,8 @@ class SensorData:
     ) -> None:
         """Update a sensor."""
         device_key = DeviceKey(key, device_id)
+        if self.precision != _PRECISION_SENTINEL and isinstance(native_value, float):
+            native_value = round(native_value, self.precision)
         self._sensor_values_updates[device_key] = SensorValue(
             name=name or self._get_key_name(key, device_id),
             device_key=device_key,
