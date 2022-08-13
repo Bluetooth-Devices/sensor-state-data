@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.2.0 (2022-08-13)
+### Feature
+* Add set_precision convenience method ([#26](https://github.com/Bluetooth-Devices/sensor-state-data/issues/26)) ([`0937284`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/0937284a66bd9b2494817aa0402235cd1635d0f3))
+
 ## v2.1.2 (2022-08-11)
 ### Fix
 * Export BinarySensorDescription ([#25](https://github.com/Bluetooth-Devices/sensor-state-data/issues/25)) ([`ecc7331`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/ecc73310db03f40b0e78d27a6ab0aa7f665f4f18))
