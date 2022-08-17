@@ -36,6 +36,14 @@ class SensorLibrary:
         device_class=SensorDeviceClass.POWER,
         native_unit_of_measurement=Units.POWER_WATT,
     )
+    ENERGY__ENERGY_KILO_WATT_HOUR = BaseSensorDescription(
+        device_class=SensorDeviceClass.ENERGY,
+        native_unit_of_measurement=Units.ENERGY_KILO_WATT_HOUR,
+    )
+    GAS__VOLUME_CUBIC_METERS = BaseSensorDescription(
+        device_class=SensorDeviceClass.GAS,
+        native_unit_of_measurement=Units.VOLUME_CUBIC_METERS,
+    )
     BATTERY__PERCENTAGE = BaseSensorDescription(
         device_class=SensorDeviceClass.BATTERY,
         native_unit_of_measurement=Units.PERCENTAGE,
@@ -54,5 +62,9 @@ class SensorLibrary:
     )
     CO2__CONCENTRATION_PARTS_PER_MILLION = BaseSensorDescription(
         device_class=SensorDeviceClass.CO2,
+        native_unit_of_measurement=Units.CONCENTRATION_PARTS_PER_MILLION,
+    )
+    VOLATILE_ORGANIC_COMPOUNDS__CONCENTRATION_PARTS_PER_MILLION = BaseSensorDescription(
+        device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
         native_unit_of_measurement=Units.CONCENTRATION_PARTS_PER_MILLION,
     )
