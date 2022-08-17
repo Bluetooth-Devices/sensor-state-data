@@ -40,7 +40,7 @@ class SensorLibrary:
         device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=Units.ENERGY_KILO_WATT_HOUR,
     )
-    GAS__ = BaseSensorDescription(
+    GAS__VOLUME_CUBIC_METERS = BaseSensorDescription(
         device_class=SensorDeviceClass.GAS,
         native_unit_of_measurement=Units.VOLUME_CUBIC_METERS,
     )
