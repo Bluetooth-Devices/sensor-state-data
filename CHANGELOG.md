@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.3.0 (2022-08-17)
+### Feature
+* New base sensors ([#27](https://github.com/Bluetooth-Devices/sensor-state-data/issues/27)) ([`b7637bf`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/b7637bf725a12fdf0f358a52c94eda54b89303c6))
+
 ## v2.2.0 (2022-08-13)
 ### Feature
 * Add set_precision convenience method ([#26](https://github.com/Bluetooth-Devices/sensor-state-data/issues/26)) ([`0937284`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/0937284a66bd9b2494817aa0402235cd1635d0f3))

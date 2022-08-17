@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sensor-state-data"
-version = "2.2.0"
+version = "2.3.0"
 description = "Models for storing and converting Sensor Data state"
 authors = ["J. Nick Koston <nick@koston.org>"]
 license = "Apache Software License 2.0"
