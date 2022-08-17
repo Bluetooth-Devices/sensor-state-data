@@ -64,7 +64,7 @@ class SensorLibrary:
         device_class=SensorDeviceClass.CO2,
         native_unit_of_measurement=Units.CONCENTRATION_PARTS_PER_MILLION,
     )
-    VOC__CONCENTRATION_PARTS_PER_MILLION = BaseSensorDescription(
+    VOLATILE_ORGANIC_COMPOUNDS__CONCENTRATION_PARTS_PER_MILLION = BaseSensorDescription(
         device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
         native_unit_of_measurement=Units.CONCENTRATION_PARTS_PER_MILLION,
     )
