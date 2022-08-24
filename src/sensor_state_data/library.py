@@ -76,7 +76,9 @@ class SensorLibrary:
         device_class=SensorDeviceClass.CO2,
         native_unit_of_measurement=Units.CONCENTRATION_PARTS_PER_MILLION,
     )
-    VOLATILE_ORGANIC_COMPOUNDS__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = BaseSensorDescription(
-        device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
-        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+    VOLATILE_ORGANIC_COMPOUNDS__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = (
+        BaseSensorDescription(
+            device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
+            native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+        )
     )
