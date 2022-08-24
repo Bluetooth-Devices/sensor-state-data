@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.3.2 (2022-08-24)
+### Fix
+* Unit of measurement voc ([#29](https://github.com/Bluetooth-Devices/sensor-state-data/issues/29)) ([`6e8a65e`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/6e8a65ecf08cb80c79a101892cf076de5974e283))
+
 ## v2.3.1 (2022-08-17)
 ### Fix
 * Add pm units ([#28](https://github.com/Bluetooth-Devices/sensor-state-data/issues/28)) ([`3df28b5`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/3df28b5d5654632e91c78fc1fd7b09fc4ad1bfab))
