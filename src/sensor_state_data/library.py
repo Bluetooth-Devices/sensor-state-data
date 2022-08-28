@@ -48,18 +48,6 @@ class SensorLibrary:
         device_class=SensorDeviceClass.BATTERY,
         native_unit_of_measurement=Units.PERCENTAGE,
     )
-    PM1 = BaseSensorDescription(
-        device_class=SensorDeviceClass.PM1,
-        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-    )
-    PM10 = BaseSensorDescription(
-        device_class=SensorDeviceClass.PM10,
-        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-    )
-    PM25 = BaseSensorDescription(
-        device_class=SensorDeviceClass.PM25,
-        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-    )
     PM1__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = BaseSensorDescription(
         device_class=SensorDeviceClass.PM1,
         native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
@@ -81,4 +69,24 @@ class SensorLibrary:
             device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
             native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
         )
+    )
+    WEIGHT__MASS_KILOGRAMS = BaseSensorDescription(
+        device_class=None,
+        native_unit_of_measurement=Units.MASS_KILOGRAMS,
+    )
+    WEIGHT__MASS_POUNDS = BaseSensorDescription(
+        device_class=None,
+        native_unit_of_measurement=Units.MASS_POUNDS,
+    )
+    MOISTURE__PERCENTAGE = BaseSensorDescription(
+        device_class=None,
+        native_unit_of_measurement=Units.PERCENTAGE,
+    )
+    DEW_POINT__TEMP_CELSIUS = BaseSensorDescription(
+        device_class=None,
+        native_unit_of_measurement=Units.TEMP_CELSIUS,
+    )
+    COUNT__NONE = BaseSensorDescription(
+        device_class=None,
+        native_unit_of_measurement=None,
     )
