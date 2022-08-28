@@ -1,4 +1,4 @@
-__version__ = "2.3.2"
+__version__ = "2.4.0"
 
 from .base import BaseDeviceClass
 from .binary_sensor.device_class import BinarySensorDeviceClass
