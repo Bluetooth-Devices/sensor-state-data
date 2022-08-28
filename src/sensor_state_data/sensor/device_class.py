@@ -54,6 +54,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # % of moisture in the air or soil
     MOISTURE = "moisture"
 
+    # mass weight (g, kg, lbs)
+    MASS_WEIGHT = "mass_weight"
+
     # Amount of money (currency)
     MONETARY = "monetary"
 
@@ -107,6 +110,3 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # voltage (V)
     VOLTAGE = "voltage"
-
-    # weight (g, kg, lbs)
-    WEIGHT = "weight"

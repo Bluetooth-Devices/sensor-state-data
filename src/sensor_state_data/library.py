@@ -70,12 +70,12 @@ class SensorLibrary:
             native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
         )
     )
-    WEIGHT__MASS_KILOGRAMS = BaseSensorDescription(
-        device_class=SensorDeviceClass.WEIGHT,
+    MASS_WEIGHT__MASS_KILOGRAMS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS_WEIGHT,
         native_unit_of_measurement=Units.MASS_KILOGRAMS,
     )
-    WEIGHT__MASS_POUNDS = BaseSensorDescription(
-        device_class=SensorDeviceClass.WEIGHT,
+    MASS_WEIGHT__MASS_POUNDS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS_WEIGHT,
         native_unit_of_measurement=Units.MASS_POUNDS,
     )
     MOISTURE__PERCENTAGE = BaseSensorDescription(
