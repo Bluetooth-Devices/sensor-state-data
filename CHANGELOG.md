@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.4.0 (2022-08-28)
+### Feature
+* New sensor types ([#30](https://github.com/Bluetooth-Devices/sensor-state-data/issues/30)) ([`883235e`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/883235e2584d0e0cab66577c6a1acd863b3e9049))
+
 ## v2.3.2 (2022-08-24)
 ### Fix
 * Unit of measurement voc ([#29](https://github.com/Bluetooth-Devices/sensor-state-data/issues/29)) ([`6e8a65e`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/6e8a65ecf08cb80c79a101892cf076de5974e283))
