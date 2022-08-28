@@ -1,4 +1,4 @@
-# These are currently the same as Home Assistant sensors
+# Supported device classes
 
 from ..base import BaseDeviceClass
 
@@ -54,8 +54,8 @@ class SensorDeviceClass(BaseDeviceClass):
     # % of moisture in the air or soil
     MOISTURE = "moisture"
 
-    # mass weight (g, kg, lbs)
-    MASS_WEIGHT = "mass_weight"
+    # mass (g, kg, lbs)
+    MASS = "mass"
 
     # Amount of money (currency)
     MONETARY = "monetary"

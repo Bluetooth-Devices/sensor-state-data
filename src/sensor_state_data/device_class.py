@@ -1,4 +1,4 @@
-# These are currently the same as Home Assistant sensors
+# Supported device classes
 
 from .sensor.device_class import SensorDeviceClass  # backwards compatibility
 from .sensor.device_class import SensorDeviceClass as DeviceClass
