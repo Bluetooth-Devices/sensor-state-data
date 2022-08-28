@@ -1,4 +1,4 @@
-# These are currently the same as Home Assistant sensors
+# Supported device classes
 
 from ..base import BaseDeviceClass
 
@@ -21,11 +21,17 @@ class SensorDeviceClass(BaseDeviceClass):
     # ppm (parts per million) Carbon Dioxide gas concentration
     CO2 = "carbon_dioxide"
 
+    # count (no unit)
+    COUNT = "count"
+
     # current (A)
     CURRENT = "current"
 
     # date (ISO8601)
     DATE = "date"
+
+    # dew point (°C/F)
+    DEW_POINT = "dew_point"
 
     # fixed duration (TIME_DAYS, TIME_HOURS, TIME_MINUTES, TIME_SECONDS)
     DURATION = "duration"
@@ -44,6 +50,12 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # current light level (lx/lm)
     ILLUMINANCE = "illuminance"
+
+    # % of moisture in the air or soil
+    MOISTURE = "moisture"
+
+    # mass (g, kg, lbs)
+    MASS = "mass"
 
     # Amount of money (currency)
     MONETARY = "monetary"
@@ -87,7 +99,7 @@ class SensorDeviceClass(BaseDeviceClass):
     # Amount of SO2 (µg/m³)
     SULPHUR_DIOXIDE = "sulphur_dioxide"
 
-    # temperature (C/F)
+    # temperature (°C/F)
     TEMPERATURE = "temperature"
 
     # timestamp (ISO8601)

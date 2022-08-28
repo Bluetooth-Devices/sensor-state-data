@@ -70,23 +70,23 @@ class SensorLibrary:
             native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
         )
     )
-    WEIGHT__MASS_KILOGRAMS = BaseSensorDescription(
-        device_class=None,
+    MASS__MASS_KILOGRAMS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS,
         native_unit_of_measurement=Units.MASS_KILOGRAMS,
     )
-    WEIGHT__MASS_POUNDS = BaseSensorDescription(
-        device_class=None,
+    MASS__MASS_POUNDS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS,
         native_unit_of_measurement=Units.MASS_POUNDS,
     )
     MOISTURE__PERCENTAGE = BaseSensorDescription(
-        device_class=None,
+        device_class=SensorDeviceClass.MOISTURE,
         native_unit_of_measurement=Units.PERCENTAGE,
     )
     DEW_POINT__TEMP_CELSIUS = BaseSensorDescription(
-        device_class=None,
+        device_class=SensorDeviceClass.DEW_POINT,
         native_unit_of_measurement=Units.TEMP_CELSIUS,
     )
     COUNT__NONE = BaseSensorDescription(
-        device_class=None,
+        device_class=SensorDeviceClass.COUNT,
         native_unit_of_measurement=None,
     )
