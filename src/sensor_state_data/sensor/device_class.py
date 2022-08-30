@@ -96,6 +96,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # signal strength (dB/dBm)
     SIGNAL_STRENGTH = "signal_strength"
 
+    # specific gravity
+    SPECIFIC_GRAVITY = "specific_gravity"
+
     # Amount of SO2 (µg/m³)
     SULPHUR_DIOXIDE = "sulphur_dioxide"
 

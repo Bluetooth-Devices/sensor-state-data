@@ -192,3 +192,6 @@ class Units(StrEnum):
     DATA_RATE_KIBIBYTES_PER_SECOND: Final = "KiB/s"
     DATA_RATE_MEBIBYTES_PER_SECOND: Final = "MiB/s"
     DATA_RATE_GIBIBYTES_PER_SECOND: Final = "GiB/s"
+
+    # Specific gravity units
+    SPECIFIC_GRAVITY = "SG"
