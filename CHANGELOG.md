@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.6.0 (2022-08-30)
+### Feature
+* Add specific gravity ([#33](https://github.com/Bluetooth-Devices/sensor-state-data/issues/33)) ([`9dacd26`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/9dacd26ed93ca545d17fd4d68b830dfc39f985f1))
+
 ## v2.5.0 (2022-08-28)
 ### Feature
 * New device classes for new sensor types ([#31](https://github.com/Bluetooth-Devices/sensor-state-data/issues/31)) ([`35c47b2`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/35c47b2628d600e9fcabf35a38b8747abdd3181c))
