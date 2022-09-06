@@ -30,6 +30,9 @@ class BinarySensorDeviceClass(BaseDeviceClass):
     # On means gas detected, Off means no gas (clear)
     GAS = "gas"
 
+    # On means On, Off means Off
+    GENERIC = "generic"
+
     # On means hot, Off means normal
     HEAT = "heat"
 
