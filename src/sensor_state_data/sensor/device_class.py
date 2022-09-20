@@ -134,4 +134,3 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # Volume start (L)
     VOLUME_START = "volume_start"
-
