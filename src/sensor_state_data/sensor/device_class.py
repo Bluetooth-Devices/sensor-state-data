@@ -51,6 +51,12 @@ class SensorDeviceClass(BaseDeviceClass):
     # current light level (lx/lm)
     ILLUMINANCE = "illuminance"
 
+    # keg size (L)
+    KEG_SIZE = "keg_size"
+
+    # keg type (no unit)
+    KEG_TYPE = "keg_type"
+
     # % of moisture in the air or soil
     MOISTURE = "moisture"
 
@@ -80,6 +86,15 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # Particulate matter <= 2.5 μm (µg/m³)
     PM25 = "pm25"
+
+    # Port count (no unit)
+    PORT_COUNT = "port_count"
+
+    # Port name (no unit)
+    PORT_NAME = "port_name"
+
+    # Port state (no unit)
+    PORT_STATE = "port_state"
 
     # power factor (%)
     POWER_FACTOR = "power_factor"
@@ -113,3 +128,9 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # voltage (V)
     VOLTAGE = "voltage"
+
+    # Volume dispensed (L)
+    VOLUME_DISPENSED = "volume_dispensed"
+
+    # Volume start (L)
+    VOLUME_START = "volume_start"

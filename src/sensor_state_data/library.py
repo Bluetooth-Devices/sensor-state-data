@@ -90,3 +90,31 @@ class SensorLibrary:
         device_class=SensorDeviceClass.COUNT,
         native_unit_of_measurement=None,
     )
+    KEG_SIZE__VOLUME_LITERS = BaseSensorDescription(
+        device_class=SensorDeviceClass.KEG_SIZE,
+        native_unit_of_measurement=Units.VOLUME_LITERS,
+    )
+    KEG_TYPE__NONE = BaseSensorDescription(
+        device_class=SensorDeviceClass.KEG_TYPE,
+        native_unit_of_measurement=None,
+    )
+    PORT_COUNT__NONE = BaseSensorDescription(
+        device_class=SensorDeviceClass.PORT_COUNT,
+        native_unit_of_measurement=None,
+    )
+    PORT_STATE__NONE = BaseSensorDescription(
+        device_class=SensorDeviceClass.PORT_STATE,
+        native_unit_of_measurement=None,
+    )
+    PORT_NAME__NONE = BaseSensorDescription(
+        device_class=SensorDeviceClass.PORT_NAME,
+        native_unit_of_measurement=None,
+    )
+    VOLUME_START__VOLUME_LITERS = BaseSensorDescription(
+        device_class=SensorDeviceClass.VOLUME_START,
+        native_unit_of_measurement=Units.VOLUME_LITERS,
+    )
+    VOLUME_DISPENSED__VOLUME_LITERS = BaseSensorDescription(
+        device_class=SensorDeviceClass.VOLUME_DISPENSED,
+        native_unit_of_measurement=Units.VOLUME_LITERS,
+    )
