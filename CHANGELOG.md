@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.8.0 (2022-09-20)
+### Feature
+* Add kegtron sensor types ([#35](https://github.com/Bluetooth-Devices/sensor-state-data/issues/35)) ([`ee56f59`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/ee56f5945540ff11228b0e73f6994d0fbb776890))
+
 ## v2.7.0 (2022-09-06)
 ### Feature
 * Add binary sensor device class ([#34](https://github.com/Bluetooth-Devices/sensor-state-data/issues/34)) ([`e34ca02`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/e34ca02fe3b37e95a1506759a5771cb43c96844f))
