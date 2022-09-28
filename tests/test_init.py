@@ -184,6 +184,7 @@ def test_with_precision_does_not_add_trailing_zeros():
         events={},
     )
 
+
 def test_event():
     class MySensorData(SensorData):
         def _start_update(self, data: Any) -> None:
@@ -191,7 +192,7 @@ def test_event():
                 key=EventDeviceKeys.DIMMER,
                 event_type=EventTypes.ROTATE_LEFT,
                 event_subtype=3,
-                device_id="living_room"
+                device_id="living_room",
             )
 
     data = MySensorData()

@@ -15,9 +15,6 @@ class SensorDeviceClass(BaseDeviceClass):
     # % of battery that is left
     BATTERY = "battery"
 
-    # button (no unit)
-    BUTTON = "button"
-
     # ppm (parts per million) Carbon Monoxide gas concentration
     CO = "carbon_monoxide"
 
@@ -35,9 +32,6 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # dew point (°C/F)
     DEW_POINT = "dew_point"
-
-    # dimmer (no unit)
-    DIMMER = "dimmer"
 
     # fixed duration (TIME_DAYS, TIME_HOURS, TIME_MINUTES, TIME_SECONDS)
     DURATION = "duration"
@@ -122,9 +116,6 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # Amount of SO2 (µg/m³)
     SULPHUR_DIOXIDE = "sulphur_dioxide"
-
-    # switch (no unit)
-    SWITCH = "switch"
 
     # temperature (°C/F)
     TEMPERATURE = "temperature"

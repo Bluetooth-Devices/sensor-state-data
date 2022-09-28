@@ -47,9 +47,7 @@ class SensorUpdate:
     binary_entity_values: dict[DeviceKey, BinarySensorValue] = dataclasses.field(
         default_factory=dict
     )
-    events: dict[DeviceKey, Event] = dataclasses.field(
-        default_factory=dict
-    )
+    events: dict[DeviceKey, Event] = dataclasses.field(default_factory=dict)
 
 
 class SensorData:
@@ -292,7 +290,14 @@ class SensorData:
         self,
         key: str,
         event_type: None | str | int | float | date | datetime | Decimal,
-        event_subtype: None | str | int | float | date | datetime | Decimal | None = None,
+        event_subtype: None
+        | str
+        | int
+        | float
+        | date
+        | datetime
+        | Decimal
+        | None = None,
         name: str | None = None,
         device_id: str | None = None,
     ) -> None:

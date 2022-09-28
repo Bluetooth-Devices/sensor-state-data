@@ -5,9 +5,9 @@ from .binary_sensor.device_class import BinarySensorDeviceClass
 from .data import SensorData, SensorDeviceInfo, SensorUpdate
 from .description import BinarySensorDescription, SensorDescription
 from .device import DeviceKey
+from .device_class import DeviceClass
 from .device_trigger.event_device_keys import EventDeviceKeys
 from .device_trigger.event_types import EventTypes
-from .device_class import DeviceClass
 from .library import SensorLibrary
 from .sensor.device_class import SensorDeviceClass
 from .units import Units

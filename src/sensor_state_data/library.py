@@ -12,10 +12,6 @@ class SensorLibrary:
         device_class=SensorDeviceClass.BATTERY,
         native_unit_of_measurement=Units.PERCENTAGE,
     )
-    BUTTON__NONE = BaseSensorDescription(
-        device_class=SensorDeviceClass.BUTTON,
-        native_unit_of_measurement=None,
-    )
     COUNT__NONE = BaseSensorDescription(
         device_class=SensorDeviceClass.COUNT,
         native_unit_of_measurement=None,
@@ -31,10 +27,6 @@ class SensorLibrary:
     DEW_POINT__TEMP_CELSIUS = BaseSensorDescription(
         device_class=SensorDeviceClass.DEW_POINT,
         native_unit_of_measurement=Units.TEMP_CELSIUS,
-    )
-    DIMMER__NONE = BaseSensorDescription(
-        device_class=SensorDeviceClass.DIMMER,
-        native_unit_of_measurement=None,
     )
     ENERGY__ENERGY_KILO_WATT_HOUR = BaseSensorDescription(
         device_class=SensorDeviceClass.ENERGY,
@@ -103,10 +95,6 @@ class SensorLibrary:
     PRESSURE__MBAR = BaseSensorDescription(
         device_class=SensorDeviceClass.PRESSURE,
         native_unit_of_measurement=Units.PRESSURE_MBAR,
-    )
-    SWITCH__NONE = BaseSensorDescription(
-        device_class=SensorDeviceClass.SWITCH,
-        native_unit_of_measurement=None,
     )
     TEMPERATURE__CELSIUS = BaseSensorDescription(
         device_class=SensorDeviceClass.TEMPERATURE,
