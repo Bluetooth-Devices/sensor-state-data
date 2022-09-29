@@ -286,7 +286,7 @@ class SensorData:
             device_class=device_class,
         )
 
-    def update_event(
+    def fire_event(
         self,
         key: str,
         event_type: None | str | int | float | date | datetime | Decimal,
