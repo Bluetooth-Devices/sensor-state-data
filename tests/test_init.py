@@ -176,7 +176,7 @@ def test_with_precision_does_not_add_trailing_zeros():
 def test_event():
     class MySensorData(SensorData):
         def _start_update(self, data: Any) -> None:
-            self.update_event(
+            self.fire_event(
                 key="dimmer",
                 event_type="rotate_left",
                 event_subtype=3,
