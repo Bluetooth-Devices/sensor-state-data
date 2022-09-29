@@ -5,8 +5,6 @@ from sensor_state_data import (
     DeviceClass,
     DeviceKey,
     Event,
-    EventDeviceKeys,
-    EventTypes,
     SensorData,
     SensorDescription,
     SensorDeviceClass,
@@ -25,16 +23,6 @@ def test_sensor_device_class():
 def test_binary_sensor_device_class():
     assert BinarySensorDeviceClass.POWER == "power"
     assert str(BinarySensorDeviceClass.POWER) == "power"
-
-
-def test_event_device_keys():
-    assert EventDeviceKeys.SWITCH == "switch"
-    assert str(EventDeviceKeys.SWITCH) == "switch"
-
-
-def test_event_types():
-    assert EventTypes.TURN_ON == "turn_on"
-    assert str(EventTypes.TURN_ON) == "turn_on"
 
 
 def test_no_precision():
@@ -189,8 +177,8 @@ def test_event():
     class MySensorData(SensorData):
         def _start_update(self, data: Any) -> None:
             self.update_event(
-                key=EventDeviceKeys.DIMMER,
-                event_type=EventTypes.ROTATE_LEFT,
+                key="dimmer",
+                event_type="rotate_left",
                 event_subtype=3,
                 device_id="living_room",
             )
