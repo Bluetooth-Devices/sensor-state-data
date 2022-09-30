@@ -32,5 +32,5 @@ class BinarySensorValue(BaseValue):
 class Event(BaseValue):
     """A class that describes device events."""
 
-    event_type: str | int | float | date | datetime | Decimal | None
-    event_subtype: str | int | float | date | datetime | Decimal | None
+    event_type: str
+    event_subtype: str | None
