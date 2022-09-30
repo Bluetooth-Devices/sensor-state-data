@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.9.0 (2022-09-30)
+### Feature
+* Add support for events ([#38](https://github.com/Bluetooth-Devices/sensor-state-data/issues/38)) ([`bc15fe7`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/bc15fe7c2209f74430dd8211164152d21f36dc8e))
+
 ## v2.8.0 (2022-09-20)
 ### Feature
 * Add kegtron sensor types ([#35](https://github.com/Bluetooth-Devices/sensor-state-data/issues/35)) ([`ee56f59`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/ee56f5945540ff11228b0e73f6994d0fbb776890))
