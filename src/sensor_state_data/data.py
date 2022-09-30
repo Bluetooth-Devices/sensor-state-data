@@ -289,15 +289,8 @@ class SensorData:
     def fire_event(
         self,
         key: str,
-        event_type: None | str | int | float | date | datetime | Decimal,
-        event_subtype: None
-        | str
-        | int
-        | float
-        | date
-        | datetime
-        | Decimal
-        | None = None,
+        event_type: str,
+        event_subtype: str | None = None,
         name: str | None = None,
         device_id: str | None = None,
     ) -> None:
