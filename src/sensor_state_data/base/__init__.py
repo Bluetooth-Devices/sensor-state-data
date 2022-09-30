@@ -4,4 +4,4 @@ from ..enum import StrEnum
 
 
 class BaseDeviceClass(StrEnum):
-    """Base class for device device class."""
+    """Base class for device class."""

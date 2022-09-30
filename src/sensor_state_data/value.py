@@ -26,3 +26,11 @@ class BinarySensorValue(BaseValue):
     """A class that describes sensor values."""
 
     native_value: bool | None
+
+
+@dataclass(frozen=True)
+class Event(BaseValue):
+    """A class that describes device events."""
+
+    event_type: str
+    event_subtype: str | None

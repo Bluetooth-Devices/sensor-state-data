@@ -15,7 +15,7 @@ from .description import (
 from .device import DeviceKey
 from .sensor.device_class import SensorDeviceClass
 from .units import Units
-from .value import BinarySensorValue, SensorValue
+from .value import BinarySensorValue, Event, SensorValue
 
 _PRECISION_SENTINEL = -1
 
@@ -47,6 +47,7 @@ class SensorUpdate:
     binary_entity_values: dict[DeviceKey, BinarySensorValue] = dataclasses.field(
         default_factory=dict
     )
+    events: dict[DeviceKey, Event] = dataclasses.field(default_factory=dict)
 
 
 class SensorData:
@@ -74,6 +75,10 @@ class SensorData:
         ] = {}
         self._binary_sensor_values: dict[DeviceKey, BinarySensorValue] = {}
         self._binary_sensor_values_updates: dict[DeviceKey, BinarySensorValue] = {}
+
+        # Events
+        self._events: dict[DeviceKey, Event] = {}
+        self._events_updates: dict[DeviceKey, Event] = {}
 
     @property
     def descriptions(
@@ -187,6 +192,7 @@ class SensorData:
             entity_values=self._sensor_values_updates,
             binary_entity_descriptions=self._binary_sensor_descriptions_updates,
             binary_entity_values=self._binary_sensor_values_updates,
+            events=self._events_updates,
         )
 
     def update_predefined_binary_sensor(
@@ -278,4 +284,21 @@ class SensorData:
             device_key=device_key,
             native_unit_of_measurement=native_unit_of_measurement,
             device_class=device_class,
+        )
+
+    def fire_event(
+        self,
+        key: str,
+        event_type: str,
+        event_subtype: str | None = None,
+        name: str | None = None,
+        device_id: str | None = None,
+    ) -> None:
+        """Fire an event."""
+        device_key = DeviceKey(key, device_id)
+        self._events_updates[device_key] = Event(
+            name=name or self._get_key_name(key, device_id),
+            device_key=device_key,
+            event_type=event_type,
+            event_subtype=event_subtype,
         )

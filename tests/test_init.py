@@ -1,8 +1,10 @@
 from typing import Any
 
 from sensor_state_data import (
+    BinarySensorDeviceClass,
     DeviceClass,
     DeviceKey,
+    Event,
     SensorData,
     SensorDescription,
     SensorDeviceClass,
@@ -13,9 +15,14 @@ from sensor_state_data import (
 )
 
 
-def test_device_class():
+def test_sensor_device_class():
     assert DeviceClass.TEMPERATURE == "temperature"
     assert str(DeviceClass.TEMPERATURE) == "temperature"
+
+
+def test_binary_sensor_device_class():
+    assert BinarySensorDeviceClass.POWER == "power"
+    assert str(BinarySensorDeviceClass.POWER) == "power"
 
 
 def test_no_precision():
@@ -47,6 +54,7 @@ def test_no_precision():
         },
         binary_entity_descriptions={},
         binary_entity_values={},
+        events={},
     )
 
 
@@ -80,6 +88,7 @@ def test_with_precision():
         },
         binary_entity_descriptions={},
         binary_entity_values={},
+        events={},
     )
 
 
@@ -117,6 +126,7 @@ def test_with_precision_between_updates():
         },
         binary_entity_descriptions={},
         binary_entity_values={},
+        events={},
     )
 
 
@@ -159,4 +169,36 @@ def test_with_precision_does_not_add_trailing_zeros():
         },
         binary_entity_descriptions={},
         binary_entity_values={},
+        events={},
+    )
+
+
+def test_event():
+    class MySensorData(SensorData):
+        def _start_update(self, data: Any) -> None:
+            self.fire_event(
+                key="dimmer",
+                event_type="rotate_left",
+                event_subtype="3",
+                device_id="living_room",
+            )
+
+    data = MySensorData()
+
+    update = data.update(b"")
+    assert update == SensorUpdate(
+        title=None,
+        devices={},
+        entity_descriptions={},
+        entity_values={},
+        binary_entity_descriptions={},
+        binary_entity_values={},
+        events={
+            DeviceKey(key="dimmer", device_id="living_room"): Event(
+                device_key=DeviceKey(key="dimmer", device_id="living_room"),
+                name="Dimmer",
+                event_type="rotate_left",
+                event_subtype="3",
+            )
+        },
     )
