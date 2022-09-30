@@ -179,7 +179,7 @@ def test_event():
             self.fire_event(
                 key="dimmer",
                 event_type="rotate_left",
-                event_subtype=3,
+                event_subtype="3",
                 device_id="living_room",
             )
 
@@ -198,7 +198,7 @@ def test_event():
                 device_key=DeviceKey(key="dimmer", device_id="living_room"),
                 name="Dimmer",
                 event_type="rotate_left",
-                event_subtype=3,
+                event_subtype="3",
             )
         },
     )
