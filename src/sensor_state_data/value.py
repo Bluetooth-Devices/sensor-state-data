@@ -33,4 +33,4 @@ class Event(BaseValue):
     """A class that describes device events."""
 
     event_type: str
-    event_subtype: str | None
+    event_properties: dict[str, str | int | float | None] | None

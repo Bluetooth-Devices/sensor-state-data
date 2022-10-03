@@ -290,7 +290,7 @@ class SensorData:
         self,
         key: str,
         event_type: str,
-        event_subtype: str | None = None,
+        event_properties: dict[str, str | int | float | None] | None = None,
         name: str | None = None,
         device_id: str | None = None,
     ) -> None:
@@ -300,5 +300,5 @@ class SensorData:
             name=name or self._get_key_name(key, device_id),
             device_key=device_key,
             event_type=event_type,
-            event_subtype=event_subtype,
+            event_properties=event_properties,
         )
