@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.9.1 (2022-10-03)
+### Fix
+* Combine event data in str or dict ([#39](https://github.com/Bluetooth-Devices/sensor-state-data/issues/39)) ([`83e870f`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/83e870fc7127a7ac4032fdaa9b24727c1f3c8b08))
+
 ## v2.9.0 (2022-09-30)
 ### Feature
 * Add support for events ([#38](https://github.com/Bluetooth-Devices/sensor-state-data/issues/38)) ([`bc15fe7`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/bc15fe7c2209f74430dd8211164152d21f36dc8e))
