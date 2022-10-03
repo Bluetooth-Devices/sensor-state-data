@@ -289,7 +289,8 @@ class SensorData:
     def fire_event(
         self,
         key: str,
-        event_data: dict[str, str | int | float | None],
+        event_type: str,
+        event_properties: dict[str, str | int | float | None] | None = None,
         name: str | None = None,
         device_id: str | None = None,
     ) -> None:
@@ -298,5 +299,6 @@ class SensorData:
         self._events_updates[device_key] = Event(
             name=name or self._get_key_name(key, device_id),
             device_key=device_key,
-            event_data=event_data,
+            event_type=event_type,
+            event_properties=event_properties,
         )
