@@ -178,8 +178,7 @@ def test_event():
         def _start_update(self, data: Any) -> None:
             self.fire_event(
                 key="dimmer",
-                event_type="rotate_left",
-                event_subtype="3",
+                event_data={"rotate_left": 3},
                 device_id="living_room",
             )
 
@@ -197,8 +196,7 @@ def test_event():
             DeviceKey(key="dimmer", device_id="living_room"): Event(
                 device_key=DeviceKey(key="dimmer", device_id="living_room"),
                 name="Dimmer",
-                event_type="rotate_left",
-                event_subtype="3",
+                event_data={"rotate_left": 3},
             )
         },
     )

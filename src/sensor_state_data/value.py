@@ -32,5 +32,4 @@ class BinarySensorValue(BaseValue):
 class Event(BaseValue):
     """A class that describes device events."""
 
-    event_type: str
-    event_subtype: str | None
+    event_data: str | dict[str, str | int | float]
