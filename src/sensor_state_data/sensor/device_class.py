@@ -30,8 +30,11 @@ class SensorDeviceClass(BaseDeviceClass):
     # date (ISO8601)
     DATE = "date"
 
-    # dew point (°C/F)
+    # dew point (°C, F)
     DEW_POINT = "dew_point"
+
+    # distance (mm, m)
+    DISTANCE = "distance"
 
     # fixed duration (TIME_DAYS, TIME_HOURS, TIME_MINUTES, TIME_SECONDS)
     DURATION = "duration"
@@ -105,6 +108,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # pressure (hPa/mbar)
     PRESSURE = "pressure"
 
+    # rotation (°)
+    ROTATION = "rotation"
+
     # reactive power (var)
     REACTIVE_POWER = "reactive_power"
 
@@ -114,11 +120,17 @@ class SensorDeviceClass(BaseDeviceClass):
     # specific gravity
     SPECIFIC_GRAVITY = "specific_gravity"
 
+    # speed (m/s)
+    SPEED = "speed"
+
     # Amount of SO2 (µg/m³)
     SULPHUR_DIOXIDE = "sulphur_dioxide"
 
     # temperature (°C/F)
     TEMPERATURE = "temperature"
+
+    # time (s)
+    TIME = "time"
 
     # timestamp (ISO8601)
     TIMESTAMP = "timestamp"

@@ -28,6 +28,14 @@ class SensorLibrary:
         device_class=SensorDeviceClass.DEW_POINT,
         native_unit_of_measurement=Units.TEMP_CELSIUS,
     )
+    DISTANCE__LENGTH_METERS = BaseSensorDescription(
+        device_class=SensorDeviceClass.DISTANCE,
+        native_unit_of_measurement=Units.LENGTH_METERS,
+    )
+    DISTANCE__LENGTH_MILLIMETERS = BaseSensorDescription(
+        device_class=SensorDeviceClass.DISTANCE,
+        native_unit_of_measurement=Units.LENGTH_MILLIMETERS,
+    )
     ENERGY__ENERGY_KILO_WATT_HOUR = BaseSensorDescription(
         device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=Units.ENERGY_KILO_WATT_HOUR,
@@ -96,9 +104,21 @@ class SensorLibrary:
         device_class=SensorDeviceClass.PRESSURE,
         native_unit_of_measurement=Units.PRESSURE_MBAR,
     )
+    ROTATION__DEGREE = BaseSensorDescription(
+        device_class=SensorDeviceClass.ROTATION,
+        native_unit_of_measurement=Units.DEGREE,
+    )
+    SPEED__SPEED_METERS_PER_SECOND = BaseSensorDescription(
+        device_class=SensorDeviceClass.SPEED,
+        native_unit_of_measurement=Units.SPEED_METERS_PER_SECOND,
+    )
     TEMPERATURE__CELSIUS = BaseSensorDescription(
         device_class=SensorDeviceClass.TEMPERATURE,
         native_unit_of_measurement=Units.TEMP_CELSIUS,
+    )
+    TIME__TIME_SECONDS = BaseSensorDescription(
+        device_class=SensorDeviceClass.TIME,
+        native_unit_of_measurement=Units.TIME_SECONDS,
     )
     VOLATILE_ORGANIC_COMPOUNDS__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = (
         BaseSensorDescription(
