@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.10.1 (2022-11-01)
+### Fix
+* Volt ampere should be ampere ([#41](https://github.com/Bluetooth-Devices/sensor-state-data/issues/41)) ([`703ba9d`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/703ba9d7def8d482df23619d29a66ea260db9813))
+
 ## v2.10.0 (2022-11-01)
 ### Feature
 * New sensor types ([#40](https://github.com/Bluetooth-Devices/sensor-state-data/issues/40)) ([`6291208`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/6291208574409a9af48341cf6a43b5e2c5375ea7))
