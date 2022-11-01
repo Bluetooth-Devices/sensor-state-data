@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.10.0 (2022-11-01)
+### Feature
+* New sensor types ([#40](https://github.com/Bluetooth-Devices/sensor-state-data/issues/40)) ([`6291208`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/6291208574409a9af48341cf6a43b5e2c5375ea7))
+
 ## v2.9.1 (2022-10-03)
 ### Fix
 * Combine event data in str or dict ([#39](https://github.com/Bluetooth-Devices/sensor-state-data/issues/39)) ([`83e870f`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/83e870fc7127a7ac4032fdaa9b24727c1f3c8b08))
