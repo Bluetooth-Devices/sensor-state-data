@@ -20,9 +20,9 @@ class SensorLibrary:
         device_class=SensorDeviceClass.CO2,
         native_unit_of_measurement=Units.CONCENTRATION_PARTS_PER_MILLION,
     )
-    CURRENT__POWER_VOLT_AMPERE = BaseSensorDescription(
+    CURRENT__ELECTRIC_CURRENT_AMPERE = BaseSensorDescription(
         device_class=SensorDeviceClass.CURRENT,
-        native_unit_of_measurement=Units.POWER_VOLT_AMPERE,
+        native_unit_of_measurement=Units.ELECTRIC_CURRENT_AMPERE,
     )
     DEW_POINT__TEMP_CELSIUS = BaseSensorDescription(
         device_class=SensorDeviceClass.DEW_POINT,
