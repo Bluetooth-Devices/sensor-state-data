@@ -116,8 +116,8 @@ class SensorLibrary:
         device_class=SensorDeviceClass.TEMPERATURE,
         native_unit_of_measurement=Units.TEMP_CELSIUS,
     )
-    TIME__TIME_SECONDS = BaseSensorDescription(
-        device_class=SensorDeviceClass.TIME,
+    DURATION__TIME_SECONDS = BaseSensorDescription(
+        device_class=SensorDeviceClass.DURATION,
         native_unit_of_measurement=Units.TIME_SECONDS,
     )
     VOLATILE_ORGANIC_COMPOUNDS__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = (
