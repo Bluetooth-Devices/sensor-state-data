@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.11.0 (2022-11-05)
+### Feature
+* Change time to duration and UV index ([#42](https://github.com/Bluetooth-Devices/sensor-state-data/issues/42)) ([`3e0a9f1`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/3e0a9f1f17aa68b9b6e122e197d223e12ce4dc22))
+
 ## v2.10.1 (2022-11-01)
 ### Fix
 * Volt ampere should be ampere ([#41](https://github.com/Bluetooth-Devices/sensor-state-data/issues/41)) ([`703ba9d`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/703ba9d7def8d482df23619d29a66ea260db9813))
