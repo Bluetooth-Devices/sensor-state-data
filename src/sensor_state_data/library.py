@@ -36,6 +36,10 @@ class SensorLibrary:
         device_class=SensorDeviceClass.DISTANCE,
         native_unit_of_measurement=Units.LENGTH_MILLIMETERS,
     )
+    DURATION__TIME_SECONDS = BaseSensorDescription(
+        device_class=SensorDeviceClass.DURATION,
+        native_unit_of_measurement=Units.TIME_SECONDS,
+    )
     ENERGY__ENERGY_KILO_WATT_HOUR = BaseSensorDescription(
         device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=Units.ENERGY_KILO_WATT_HOUR,
@@ -116,9 +120,9 @@ class SensorLibrary:
         device_class=SensorDeviceClass.TEMPERATURE,
         native_unit_of_measurement=Units.TEMP_CELSIUS,
     )
-    DURATION__TIME_SECONDS = BaseSensorDescription(
-        device_class=SensorDeviceClass.DURATION,
-        native_unit_of_measurement=Units.TIME_SECONDS,
+    UV_INDEX__NONE = BaseSensorDescription(
+        device_class=SensorDeviceClass.UV_INDEX,
+        native_unit_of_measurement=None,
     )
     VOLATILE_ORGANIC_COMPOUNDS__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = (
         BaseSensorDescription(

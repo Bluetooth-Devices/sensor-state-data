@@ -135,6 +135,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # timestamp (ISO8601)
     TIMESTAMP = "timestamp"
 
+    # UV index (no unit)
+    UV_INDEX = "uv_index"
+
     # Amount of VOC (µg/m³)
     VOLATILE_ORGANIC_COMPOUNDS = "volatile_organic_compounds"
 
