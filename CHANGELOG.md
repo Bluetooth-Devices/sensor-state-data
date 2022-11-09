@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.12.0 (2022-11-09)
+### Feature
+* Add conductivity and formaldehyde ([#43](https://github.com/Bluetooth-Devices/sensor-state-data/issues/43)) ([`53edc7a`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/53edc7a3b9508028d30e774eda3e65d16b89390b))
+
 ## v2.11.0 (2022-11-05)
 ### Feature
 * Change time to duration and UV index ([#42](https://github.com/Bluetooth-Devices/sensor-state-data/issues/42)) ([`3e0a9f1`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/3e0a9f1f17aa68b9b6e122e197d223e12ce4dc22))
