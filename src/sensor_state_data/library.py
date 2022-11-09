@@ -12,6 +12,10 @@ class SensorLibrary:
         device_class=SensorDeviceClass.BATTERY,
         native_unit_of_measurement=Units.PERCENTAGE,
     )
+    CONDUCTIVITY__CONDUCTIVITY = BaseSensorDescription(
+        device_class=SensorDeviceClass.CONDUCTIVITY,
+        native_unit_of_measurement=Units.CONDUCTIVITY,
+    )
     COUNT__NONE = BaseSensorDescription(
         device_class=SensorDeviceClass.COUNT,
         native_unit_of_measurement=None,
@@ -43,6 +47,10 @@ class SensorLibrary:
     ENERGY__ENERGY_KILO_WATT_HOUR = BaseSensorDescription(
         device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=Units.ENERGY_KILO_WATT_HOUR,
+    )
+    FORMALDEHYDE__CONCENTRATION_MILLIGRAMS_PER_CUBIC_METER = BaseSensorDescription(
+        device_class=SensorDeviceClass.FORMALDEHYDE,
+        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
     )
     GAS__VOLUME_CUBIC_METERS = BaseSensorDescription(
         device_class=SensorDeviceClass.GAS,
