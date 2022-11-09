@@ -21,6 +21,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # ppm (parts per million) Carbon Dioxide gas concentration
     CO2 = "carbon_dioxide"
 
+    # conductivity (µS/cm)
+    CONDUCTIVITY = "conductivity"
+
     # count (no unit)
     COUNT = "count"
 
@@ -41,6 +44,9 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # energy (Wh, kWh, MWh)
     ENERGY = "energy"
+
+    # formaldehyde (µg/m³)
+    FORMALDEHYDE = "formaldehyde"
 
     # frequency (Hz, kHz, MHz, GHz)
     FREQUENCY = "frequency"
