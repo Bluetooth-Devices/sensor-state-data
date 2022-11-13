@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.12.1 (2022-11-13)
+### Fix
+* Wrong unit formaldehyde ([#44](https://github.com/Bluetooth-Devices/sensor-state-data/issues/44)) ([`0c8216f`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/0c8216f1ad9b7341a5c68669bd39fdd7500cf59f))
+
 ## v2.12.0 (2022-11-09)
 ### Feature
 * Add conductivity and formaldehyde ([#43](https://github.com/Bluetooth-Devices/sensor-state-data/issues/43)) ([`53edc7a`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/53edc7a3b9508028d30e774eda3e65d16b89390b))
