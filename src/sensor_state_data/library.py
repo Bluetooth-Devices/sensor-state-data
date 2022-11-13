@@ -50,7 +50,7 @@ class SensorLibrary:
     )
     FORMALDEHYDE__CONCENTRATION_MILLIGRAMS_PER_CUBIC_METER = BaseSensorDescription(
         device_class=SensorDeviceClass.FORMALDEHYDE,
-        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+        native_unit_of_measurement=Units.CONCENTRATION_MILLIGRAMS_PER_CUBIC_METER,
     )
     GAS__VOLUME_CUBIC_METERS = BaseSensorDescription(
         device_class=SensorDeviceClass.GAS,
