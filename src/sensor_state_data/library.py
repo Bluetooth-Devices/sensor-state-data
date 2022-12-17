@@ -48,6 +48,10 @@ class SensorLibrary:
         device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=Units.ENERGY_KILO_WATT_HOUR,
     )
+    VOLUME_FLOW_RATE__VOLUME_FLOW_RATE_CUBIC_METERS_PER_HOUR = BaseSensorDescription(
+        device_class=SensorDeviceClass.VOLUME_FLOW_RATE,
+        native_unit_of_measurement=Units.VOLUME_FLOW_RATE_CUBIC_METERS_PER_HOUR,
+    )
     FORMALDEHYDE__CONCENTRATION_MILLIGRAMS_PER_CUBIC_METER = BaseSensorDescription(
         device_class=SensorDeviceClass.FORMALDEHYDE,
         native_unit_of_measurement=Units.CONCENTRATION_MILLIGRAMS_PER_CUBIC_METER,
@@ -83,6 +87,10 @@ class SensorLibrary:
     MOISTURE__PERCENTAGE = BaseSensorDescription(
         device_class=SensorDeviceClass.MOISTURE,
         native_unit_of_measurement=Units.PERCENTAGE,
+    )
+    PACKET_ID__NONE = BaseSensorDescription(
+        device_class=SensorDeviceClass.PACKET_ID,
+        native_unit_of_measurement=None,
     )
     PM1__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = BaseSensorDescription(
         device_class=SensorDeviceClass.PM1,
@@ -149,4 +157,12 @@ class SensorLibrary:
     VOLUME_START__VOLUME_LITERS = BaseSensorDescription(
         device_class=SensorDeviceClass.VOLUME_START,
         native_unit_of_measurement=Units.VOLUME_LITERS,
+    )
+    VOLUME__VOLUME_LITERS = BaseSensorDescription(
+        device_class=SensorDeviceClass.VOLUME,
+        native_unit_of_measurement=Units.VOLUME_LITERS,
+    )
+    VOLUME__VOLUME_MILLILITERS = BaseSensorDescription(
+        device_class=SensorDeviceClass.VOLUME,
+        native_unit_of_measurement=Units.VOLUME_MILLILITERS,
     )
