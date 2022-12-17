@@ -45,6 +45,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # energy (Wh, kWh, MWh)
     ENERGY = "energy"
 
+    # Volume flow rate (m3 per hour)
+    VOLUME_FLOW_RATE = "volume_flow_rate"
+
     # formaldehyde (µg/m³)
     FORMALDEHYDE = "formaldehyde"
 
