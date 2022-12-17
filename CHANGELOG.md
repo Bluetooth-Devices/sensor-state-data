@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.13.0 (2022-12-17)
+### Feature
+* Add volume and packet_id sensor types ([#45](https://github.com/Bluetooth-Devices/sensor-state-data/issues/45)) ([`cda847e`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/cda847e2f94884b1018fa7eb1f3ce6feda0630c7))
+
 ## v2.12.1 (2022-11-13)
 ### Fix
 * Wrong unit formaldehyde ([#44](https://github.com/Bluetooth-Devices/sensor-state-data/issues/44)) ([`0c8216f`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/0c8216f1ad9b7341a5c68669bd39fdd7500cf59f))
