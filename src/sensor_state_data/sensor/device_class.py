@@ -164,3 +164,6 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # Volume start (L)
     VOLUME_START = "volume_start"
+
+    # Water (L)
+    WATER = "water"
