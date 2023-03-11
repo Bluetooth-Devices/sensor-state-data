@@ -166,3 +166,7 @@ class SensorLibrary:
         device_class=SensorDeviceClass.VOLUME,
         native_unit_of_measurement=Units.VOLUME_MILLILITERS,
     )
+    WATER__VOLUME_LITERS = BaseSensorDescription(
+        device_class=SensorDeviceClass.WATER,
+        native_unit_of_measurement=Units.VOLUME_LITERS,
+    )
