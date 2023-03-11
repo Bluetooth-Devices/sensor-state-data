@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.14.0 (2023-03-11)
+### Feature
+* Add water sensor ([#46](https://github.com/Bluetooth-Devices/sensor-state-data/issues/46)) ([`a90039e`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/a90039ec207a5aedf8455bd2afa4cedea7a311af))
+
 ## v2.13.0 (2022-12-17)
 ### Feature
 * Add volume and packet_id sensor types ([#45](https://github.com/Bluetooth-Devices/sensor-state-data/issues/45)) ([`cda847e`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/cda847e2f94884b1018fa7eb1f3ce6feda0630c7))
