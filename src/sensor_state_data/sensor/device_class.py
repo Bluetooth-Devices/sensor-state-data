@@ -30,6 +30,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # current (A)
     CURRENT = "current"
 
+    # current flow (Ah)
+    CURRENT_FLOW = "current_flow"
+
     # date (ISO8601)
     DATE = "date"
 

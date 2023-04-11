@@ -29,6 +29,10 @@ class Units(StrEnum):
     ELECTRIC_CURRENT_MILLIAMPERE: Final = "mA"
     ELECTRIC_CURRENT_AMPERE: Final = "A"
 
+    # Electric current flow units
+    ELECTRIC_CURRENT_FLOW_MILLIAMPERE_HOUR: Final = "mAh"
+    ELECTRIC_CURRENT_FLOW_AMPERE_HOUR: Final = "Ah"
+
     # Electric_potential units
     ELECTRIC_POTENTIAL_MILLIVOLT: Final = "mV"
     ELECTRIC_POTENTIAL_VOLT: Final = "V"

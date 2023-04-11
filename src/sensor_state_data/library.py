@@ -28,6 +28,10 @@ class SensorLibrary:
         device_class=SensorDeviceClass.CURRENT,
         native_unit_of_measurement=Units.ELECTRIC_CURRENT_AMPERE,
     )
+    CURRENT_FLOW__ELECTRIC_CURRENT_FLOW_AMPERE_HOUR = BaseSensorDescription(
+        device_class=SensorDeviceClass.CURRENT_FLOW,
+        native_unit_of_measurement=Units.ELECTRIC_CURRENT_FLOW_AMPERE_HOUR,
+    )
     DEW_POINT__TEMP_CELSIUS = BaseSensorDescription(
         device_class=SensorDeviceClass.DEW_POINT,
         native_unit_of_measurement=Units.TEMP_CELSIUS,
