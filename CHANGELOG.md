@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.15.1 (2023-05-14)
+### Fix
+* Unit of gyroscope ([#49](https://github.com/Bluetooth-Devices/sensor-state-data/issues/49)) ([`6a61e9a`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/6a61e9a3d33b9a2acdd65cd7bb293cf31486b71f))
+
 ## v2.15.0 (2023-05-14)
 ### Feature
 * Add acceleration gyroscope and timestamp sensors ([#48](https://github.com/Bluetooth-Devices/sensor-state-data/issues/48)) ([`e882f8b`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/e882f8bb8e0c9353d00d947e8774a5ae53c99687))
