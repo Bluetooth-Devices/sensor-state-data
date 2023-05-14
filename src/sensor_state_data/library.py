@@ -8,6 +8,10 @@ from .units import Units
 class SensorLibrary:
     """A library of sensor common descriptions."""
 
+    ACCELERATION__ACCELERATION_METERS_PER_SQUARE_SECOND = BaseSensorDescription(
+        device_class=SensorDeviceClass.ACCELERATION,
+        native_unit_of_measurement=Units.ACCELERATION_METERS_PER_SQUARE_SECOND,
+    )
     BATTERY__PERCENTAGE = BaseSensorDescription(
         device_class=SensorDeviceClass.BATTERY,
         native_unit_of_measurement=Units.PERCENTAGE,
@@ -47,6 +51,10 @@ class SensorLibrary:
     ENERGY__ENERGY_KILO_WATT_HOUR = BaseSensorDescription(
         device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=Units.ENERGY_KILO_WATT_HOUR,
+    )
+    GYROSCOPE__GYROSCOPE_ANGLE_PER_SECOND = BaseSensorDescription(
+        device_class=SensorDeviceClass.GYROSCOPE,
+        native_unit_of_measurement=Units.GYROSCOPE_ANGLE_PER_SECOND,
     )
     VOLUME_FLOW_RATE__VOLUME_FLOW_RATE_CUBIC_METERS_PER_HOUR = BaseSensorDescription(
         device_class=SensorDeviceClass.VOLUME_FLOW_RATE,
@@ -135,6 +143,10 @@ class SensorLibrary:
     TEMPERATURE__CELSIUS = BaseSensorDescription(
         device_class=SensorDeviceClass.TEMPERATURE,
         native_unit_of_measurement=Units.TEMP_CELSIUS,
+    )
+    TIMESTAMP__NONE = BaseSensorDescription(
+        device_class=SensorDeviceClass.TIMESTAMP,
+        native_unit_of_measurement=None,
     )
     UV_INDEX__NONE = BaseSensorDescription(
         device_class=SensorDeviceClass.UV_INDEX,
