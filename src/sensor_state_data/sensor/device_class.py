@@ -6,6 +6,9 @@ from ..base import BaseDeviceClass
 class SensorDeviceClass(BaseDeviceClass):
     """Device class for sensors."""
 
+    # acceleration (mG)
+    ACCELERATION = "acceleration"
+
     # apparent power (VA)
     APPARENT_POWER = "apparent_power"
 
@@ -56,6 +59,9 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # gas (m³ or ft³)
     GAS = "gas"
+
+    # gyroscope (° per second)
+    GYROSCOPE = "gyroscope"
 
     # % of humidity in the air
     HUMIDITY = "humidity"

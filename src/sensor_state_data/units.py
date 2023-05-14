@@ -153,6 +153,12 @@ class Units(StrEnum):
     SPEED_KNOTS: Final = "kn"
     SPEED_MILES_PER_HOUR: Final = "mph"
 
+    # Acceleration units
+    ACCELERATION_METERS_PER_SQUARE_SECOND: Final = "m/s²"
+
+    # Gyroscope units
+    GYROSCOPE_ANGLE_PER_SECOND: Final = "°/s"
+
     # Signal_strength units
     SIGNAL_STRENGTH_DECIBELS: Final = "dB"
     SIGNAL_STRENGTH_DECIBELS_MILLIWATT: Final = "dBm"
