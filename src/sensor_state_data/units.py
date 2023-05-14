@@ -157,7 +157,7 @@ class Units(StrEnum):
     ACCELERATION_METERS_PER_SQUARE_SECOND: Final = "m/s²"
 
     # Gyroscope units
-    GYROSCOPE_ANGLE_PER_SECOND: Final = "°/s"
+    GYROSCOPE_DEGREES_PER_SECOND: Final = "°/s"
 
     # Signal_strength units
     SIGNAL_STRENGTH_DECIBELS: Final = "dB"

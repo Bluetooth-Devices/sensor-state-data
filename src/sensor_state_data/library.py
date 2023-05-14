@@ -52,9 +52,9 @@ class SensorLibrary:
         device_class=SensorDeviceClass.ENERGY,
         native_unit_of_measurement=Units.ENERGY_KILO_WATT_HOUR,
     )
-    GYROSCOPE__GYROSCOPE_ANGLE_PER_SECOND = BaseSensorDescription(
+    GYROSCOPE__GYROSCOPE_DEGREES_PER_SECOND = BaseSensorDescription(
         device_class=SensorDeviceClass.GYROSCOPE,
-        native_unit_of_measurement=Units.GYROSCOPE_ANGLE_PER_SECOND,
+        native_unit_of_measurement=Units.GYROSCOPE_DEGREES_PER_SECOND,
     )
     VOLUME_FLOW_RATE__VOLUME_FLOW_RATE_CUBIC_METERS_PER_HOUR = BaseSensorDescription(
         device_class=SensorDeviceClass.VOLUME_FLOW_RATE,
