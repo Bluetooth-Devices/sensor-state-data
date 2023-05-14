@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.15.0 (2023-05-14)
+### Feature
+* Add acceleration gyroscope and timestamp sensors ([#48](https://github.com/Bluetooth-Devices/sensor-state-data/issues/48)) ([`e882f8b`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/e882f8bb8e0c9353d00d947e8774a5ae53c99687))
+
 ## v2.14.0 (2023-03-11)
 ### Feature
 * Add water sensor ([#46](https://github.com/Bluetooth-Devices/sensor-state-data/issues/46)) ([`a90039e`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/a90039ec207a5aedf8455bd2afa4cedea7a311af))
