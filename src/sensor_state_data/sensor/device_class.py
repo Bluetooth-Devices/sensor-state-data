@@ -138,6 +138,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # specific gravity
     SPECIFIC_GRAVITY = "specific_gravity"
 
+    # specific gravity trend
+    SPECIFIC_GRAVITY_TREND = "specific_gravity_trend"
+
     # speed (m/s)
     SPEED = "speed"
 

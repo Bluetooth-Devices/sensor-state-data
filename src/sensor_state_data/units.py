@@ -201,3 +201,4 @@ class Units(StrEnum):
 
     # Specific gravity units
     SPECIFIC_GRAVITY = "SG"
+    SPECIFIC_GRAVITY_PER_DAY = "SG/d"
