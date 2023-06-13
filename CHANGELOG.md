@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.16.0 (2023-06-13)
+### Feature
+* Add sensor description for pressure in hPa ([#52](https://github.com/Bluetooth-Devices/sensor-state-data/issues/52)) ([`8e06dc8`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/8e06dc850830d7bc83a1295646788fb863edf8a8))
+
 ## v2.15.1 (2023-05-14)
 ### Fix
 * Unit of gyroscope ([#49](https://github.com/Bluetooth-Devices/sensor-state-data/issues/49)) ([`6a61e9a`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/6a61e9a3d33b9a2acdd65cd7bb293cf31486b71f))
