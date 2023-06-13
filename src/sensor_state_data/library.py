@@ -128,6 +128,10 @@ class SensorLibrary:
         device_class=SensorDeviceClass.POWER,
         native_unit_of_measurement=Units.POWER_WATT,
     )
+    PRESSURE__HPA = BaseSensorDescription(
+        device_class=SensorDeviceClass.PRESSURE,
+        native_unit_of_measurement=Units.PRESSURE_HPA,
+    )
     PRESSURE__MBAR = BaseSensorDescription(
         device_class=SensorDeviceClass.PRESSURE,
         native_unit_of_measurement=Units.PRESSURE_MBAR,
