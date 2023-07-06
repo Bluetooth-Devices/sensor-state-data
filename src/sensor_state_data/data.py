@@ -172,6 +172,10 @@ class SensorData:
 
     def update(self, data: Any) -> SensorUpdate:
         """Update a device."""
+        # Ensure events from previous
+        # updates are not carried over
+        # as events are transient.
+        self._events_updates.clear()
         self._start_update(data)
         return self._finish_update()
 

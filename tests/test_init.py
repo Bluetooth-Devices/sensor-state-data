@@ -174,11 +174,16 @@ def test_with_precision_does_not_add_trailing_zeros():
 
 
 def test_event():
+    update_count = 0
+
     class MySensorData(SensorData):
         def _start_update(self, data: Any) -> None:
+            nonlocal update_count
+            update_count += 1
+
             self.fire_event(
                 key="dimmer",
-                event_type="rotate_left",
+                event_type=f"rotate_left_{update_count}",
                 event_properties={"steps": 3},
                 device_id="living_room",
             )
@@ -197,7 +202,25 @@ def test_event():
             DeviceKey(key="dimmer", device_id="living_room"): Event(
                 device_key=DeviceKey(key="dimmer", device_id="living_room"),
                 name="Dimmer",
-                event_type="rotate_left",
+                event_type="rotate_left_1",
+                event_properties={"steps": 3},
+            )
+        },
+    )
+
+    update = data.update(b"")
+    assert update == SensorUpdate(
+        title=None,
+        devices={},
+        entity_descriptions={},
+        entity_values={},
+        binary_entity_descriptions={},
+        binary_entity_values={},
+        events={
+            DeviceKey(key="dimmer", device_id="living_room"): Event(
+                device_key=DeviceKey(key="dimmer", device_id="living_room"),
+                name="Dimmer",
+                event_type="rotate_left_2",
                 event_properties={"steps": 3},
             )
         },
