@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v2.16.1 (2023-07-06)
+
+### Fix
+
+* Ensure events are only kept for a single update cycle ([#53](https://github.com/Bluetooth-Devices/sensor-state-data/issues/53)) ([`304a844`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/304a844009204a524c0ad29821765e43288b44ca))
+
 ## v2.16.0 (2023-06-13)
 ### Feature
 * Add sensor description for pressure in hPa ([#52](https://github.com/Bluetooth-Devices/sensor-state-data/issues/52)) ([`8e06dc8`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/8e06dc850830d7bc83a1295646788fb863edf8a8))
