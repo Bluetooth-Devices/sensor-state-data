@@ -20,7 +20,7 @@ from .value import BinarySensorValue, Event, SensorValue
 _PRECISION_SENTINEL = -1
 
 
-@dataclasses.dataclass(frozen=False)
+@dataclasses.dataclass(frozen=False, slots=True)
 class SensorDeviceInfo:
 
     name: str | None
@@ -30,7 +30,7 @@ class SensorDeviceInfo:
     hw_version: str | None
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass(frozen=True, slots=True)
 class SensorUpdate:
 
     title: str | None

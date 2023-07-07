@@ -7,28 +7,28 @@ from decimal import Decimal
 from .device import DeviceKey
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True)
 class BaseValue:
 
     device_key: DeviceKey
     name: str
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True)
 class SensorValue(BaseValue):
     """A class that describes sensor values."""
 
     native_value: str | int | float | date | datetime | Decimal | None
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True)
 class BinarySensorValue(BaseValue):
     """A class that describes sensor values."""
 
     native_value: bool | None
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True)
 class Event(BaseValue):
     """A class that describes device events."""
 
