@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v2.17.0 (2023-07-17)
+
+### Feature
+
+* Add sensors for scales ([#56](https://github.com/Bluetooth-Devices/sensor-state-data/issues/56)) ([`8c3160e`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/8c3160e89a7f49a0b96b010613784936c667d476))
+
 ## v2.16.1 (2023-07-06)
 
 ### Fix
