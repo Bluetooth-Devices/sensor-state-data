@@ -100,7 +100,7 @@ class SensorLibrary:
         device_class=SensorDeviceClass.MASS_NON_STABILIZED,
         native_unit_of_measurement=Units.MASS_KILOGRAMS,
     )
-    MASS_NON_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
+    MASS_NON_STABILIZED__MASS_POUNDS = BaseSensorDescription(
         device_class=SensorDeviceClass.MASS_NON_STABILIZED,
         native_unit_of_measurement=Units.MASS_POUNDS,
     )
@@ -108,7 +108,7 @@ class SensorLibrary:
         device_class=SensorDeviceClass.MASS_STABILIZED,
         native_unit_of_measurement=Units.MASS_KILOGRAMS,
     )
-    MASS_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
+    MASS_STABILIZED__MASS_POUNDS = BaseSensorDescription(
         device_class=SensorDeviceClass.MASS_STABILIZED,
         native_unit_of_measurement=Units.MASS_POUNDS,
     )
