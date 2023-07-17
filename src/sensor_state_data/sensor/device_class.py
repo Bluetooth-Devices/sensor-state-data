@@ -85,7 +85,7 @@ class SensorDeviceClass(BaseDeviceClass):
     MASS = "mass"
 
     # mass non-stabilized (kg/lbs)
-    MASS_NON_STABILIZED = "mass_non-stabilized"
+    MASS_NON_STABILIZED = "mass_non_stabilized"
 
     # mass stabilized (kg/lbs)
     MASS_STABILIZED = "mass_stabilized"
