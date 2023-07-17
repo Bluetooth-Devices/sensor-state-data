@@ -114,6 +114,9 @@ class Units(StrEnum):
     MASS_OUNCES: Final = "oz"
     MASS_POUNDS: Final = "lb"
 
+    # Impedance units
+    OHM: Final = "ohm"
+
     # Conductivity units
     CONDUCTIVITY: Final = "µS/cm"
 

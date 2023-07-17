@@ -69,6 +69,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # current light level (lx/lm)
     ILLUMINANCE = "illuminance"
 
+    # impedance (Ohm)
+    IMPEDANCE = "impedance"
+
     # keg size (L)
     KEG_SIZE = "keg_size"
 
@@ -173,3 +176,9 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # Water (L)
     WATER = "water"
+
+    # weight non-stabilized (kg/lbs)
+    WEIGHT_NON_STABILIZED = "weight_non-stabilized"
+
+    # weight stabilized (kg/lbs)
+    WEIGHT_STABILIZED = "weight_stabilized"
