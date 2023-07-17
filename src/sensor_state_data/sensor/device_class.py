@@ -69,6 +69,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # current light level (lx/lm)
     ILLUMINANCE = "illuminance"
 
+    # impedance (Ohm)
+    IMPEDANCE = "impedance"
+
     # keg size (L)
     KEG_SIZE = "keg_size"
 
@@ -80,6 +83,12 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # mass (g, kg, lbs)
     MASS = "mass"
+
+    # mass non-stabilized (kg/lbs)
+    MASS_NON_STABILIZED = "mass_non_stabilized"
+
+    # mass stabilized (kg/lbs)
+    MASS_STABILIZED = "mass_stabilized"
 
     # Amount of money (currency)
     MONETARY = "monetary"

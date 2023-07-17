@@ -56,10 +56,6 @@ class SensorLibrary:
         device_class=SensorDeviceClass.GYROSCOPE,
         native_unit_of_measurement=Units.GYROSCOPE_DEGREES_PER_SECOND,
     )
-    VOLUME_FLOW_RATE__VOLUME_FLOW_RATE_CUBIC_METERS_PER_HOUR = BaseSensorDescription(
-        device_class=SensorDeviceClass.VOLUME_FLOW_RATE,
-        native_unit_of_measurement=Units.VOLUME_FLOW_RATE_CUBIC_METERS_PER_HOUR,
-    )
     FORMALDEHYDE__CONCENTRATION_MILLIGRAMS_PER_CUBIC_METER = BaseSensorDescription(
         device_class=SensorDeviceClass.FORMALDEHYDE,
         native_unit_of_measurement=Units.CONCENTRATION_MILLIGRAMS_PER_CUBIC_METER,
@@ -71,6 +67,10 @@ class SensorLibrary:
     HUMIDITY__PERCENTAGE = BaseSensorDescription(
         device_class=SensorDeviceClass.HUMIDITY,
         native_unit_of_measurement=Units.PERCENTAGE,
+    )
+    IMPEDANCE__OHM = BaseSensorDescription(
+        device_class=SensorDeviceClass.IMPEDANCE,
+        native_unit_of_measurement=Units.OHM,
     )
     KEG_SIZE__VOLUME_LITERS = BaseSensorDescription(
         device_class=SensorDeviceClass.KEG_SIZE,
@@ -95,6 +95,22 @@ class SensorLibrary:
     MOISTURE__PERCENTAGE = BaseSensorDescription(
         device_class=SensorDeviceClass.MOISTURE,
         native_unit_of_measurement=Units.PERCENTAGE,
+    )
+    MASS_NON_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS_NON_STABILIZED,
+        native_unit_of_measurement=Units.MASS_KILOGRAMS,
+    )
+    MASS_NON_STABILIZED__MASS_POUNDS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS_NON_STABILIZED,
+        native_unit_of_measurement=Units.MASS_POUNDS,
+    )
+    MASS_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS_STABILIZED,
+        native_unit_of_measurement=Units.MASS_KILOGRAMS,
+    )
+    MASS_STABILIZED__MASS_POUNDS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS_STABILIZED,
+        native_unit_of_measurement=Units.MASS_POUNDS,
     )
     PACKET_ID__NONE = BaseSensorDescription(
         device_class=SensorDeviceClass.PACKET_ID,
@@ -169,6 +185,10 @@ class SensorLibrary:
     VOLUME_DISPENSED__VOLUME_LITERS = BaseSensorDescription(
         device_class=SensorDeviceClass.VOLUME_DISPENSED,
         native_unit_of_measurement=Units.VOLUME_LITERS,
+    )
+    VOLUME_FLOW_RATE__VOLUME_FLOW_RATE_CUBIC_METERS_PER_HOUR = BaseSensorDescription(
+        device_class=SensorDeviceClass.VOLUME_FLOW_RATE,
+        native_unit_of_measurement=Units.VOLUME_FLOW_RATE_CUBIC_METERS_PER_HOUR,
     )
     VOLUME_START__VOLUME_LITERS = BaseSensorDescription(
         device_class=SensorDeviceClass.VOLUME_START,
