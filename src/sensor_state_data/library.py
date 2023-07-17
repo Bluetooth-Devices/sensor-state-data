@@ -96,20 +96,20 @@ class SensorLibrary:
         device_class=SensorDeviceClass.MOISTURE,
         native_unit_of_measurement=Units.PERCENTAGE,
     )
-    WEIGHT_NON_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
-        device_class=SensorDeviceClass.WEIGHT_NON_STABILIZED,
+    MASS_NON_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS_NON_STABILIZED,
         native_unit_of_measurement=Units.MASS_KILOGRAMS,
     )
-    WEIGHT_NON_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
-        device_class=SensorDeviceClass.WEIGHT_NON_STABILIZED,
+    MASS_NON_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS_NON_STABILIZED,
         native_unit_of_measurement=Units.MASS_POUNDS,
     )
-    WEIGHT_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
-        device_class=SensorDeviceClass.WEIGHT_STABILIZED,
+    MASS_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS_STABILIZED,
         native_unit_of_measurement=Units.MASS_KILOGRAMS,
     )
-    WEIGHT_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
-        device_class=SensorDeviceClass.WEIGHT_STABILIZED,
+    MASS_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
+        device_class=SensorDeviceClass.MASS_STABILIZED,
         native_unit_of_measurement=Units.MASS_POUNDS,
     )
     PACKET_ID__NONE = BaseSensorDescription(

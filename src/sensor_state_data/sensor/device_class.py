@@ -84,6 +84,12 @@ class SensorDeviceClass(BaseDeviceClass):
     # mass (g, kg, lbs)
     MASS = "mass"
 
+    # mass non-stabilized (kg/lbs)
+    MASS_NON_STABILIZED = "mass_non-stabilized"
+
+    # mass stabilized (kg/lbs)
+    MASS_STABILIZED = "mass_stabilized"
+
     # Amount of money (currency)
     MONETARY = "monetary"
 
@@ -176,9 +182,3 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # Water (L)
     WATER = "water"
-
-    # weight non-stabilized (kg/lbs)
-    WEIGHT_NON_STABILIZED = "weight_non-stabilized"
-
-    # weight stabilized (kg/lbs)
-    WEIGHT_STABILIZED = "weight_stabilized"
