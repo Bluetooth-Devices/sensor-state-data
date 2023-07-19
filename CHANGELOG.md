@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v2.17.1 (2023-07-19)
+
+### Fix
+
+* Remove unwanted scale sensors ([#57](https://github.com/Bluetooth-Devices/sensor-state-data/issues/57)) ([`9ed2d0b`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/9ed2d0b586d4bcc93574d9de0cf5e0974509760e))
+
 ## v2.17.0 (2023-07-17)
 
 ### Feature
