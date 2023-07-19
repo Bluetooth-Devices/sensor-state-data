@@ -100,18 +100,6 @@ class SensorLibrary:
         device_class=SensorDeviceClass.MASS_NON_STABILIZED,
         native_unit_of_measurement=Units.MASS_KILOGRAMS,
     )
-    MASS_NON_STABILIZED__MASS_POUNDS = BaseSensorDescription(
-        device_class=SensorDeviceClass.MASS_NON_STABILIZED,
-        native_unit_of_measurement=Units.MASS_POUNDS,
-    )
-    MASS_STABILIZED__MASS_KILOGRAMS = BaseSensorDescription(
-        device_class=SensorDeviceClass.MASS_STABILIZED,
-        native_unit_of_measurement=Units.MASS_KILOGRAMS,
-    )
-    MASS_STABILIZED__MASS_POUNDS = BaseSensorDescription(
-        device_class=SensorDeviceClass.MASS_STABILIZED,
-        native_unit_of_measurement=Units.MASS_POUNDS,
-    )
     PACKET_ID__NONE = BaseSensorDescription(
         device_class=SensorDeviceClass.PACKET_ID,
         native_unit_of_measurement=None,
