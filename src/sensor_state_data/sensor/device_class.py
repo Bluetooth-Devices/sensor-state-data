@@ -87,9 +87,6 @@ class SensorDeviceClass(BaseDeviceClass):
     # mass non-stabilized (kg/lbs)
     MASS_NON_STABILIZED = "mass_non_stabilized"
 
-    # mass stabilized (kg/lbs)
-    MASS_STABILIZED = "mass_stabilized"
-
     # Amount of money (currency)
     MONETARY = "monetary"
 
