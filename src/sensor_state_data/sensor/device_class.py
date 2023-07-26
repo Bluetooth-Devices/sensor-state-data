@@ -138,6 +138,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # reactive power (var)
     REACTIVE_POWER = "reactive_power"
 
+    # score (no unit)
+    SCORE = "score"
+
     # signal strength (dB/dBm)
     SIGNAL_STRENGTH = "signal_strength"
 

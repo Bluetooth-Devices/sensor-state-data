@@ -144,6 +144,10 @@ class SensorLibrary:
         device_class=SensorDeviceClass.ROTATION,
         native_unit_of_measurement=Units.DEGREE,
     )
+    SCORE__NONE = BaseSensorDescription(
+        device_class=SensorDeviceClass.SCORE,
+        native_unit_of_measurement=None,
+    )
     SPEED__SPEED_METERS_PER_SECOND = BaseSensorDescription(
         device_class=SensorDeviceClass.SPEED,
         native_unit_of_measurement=Units.SPEED_METERS_PER_SECOND,
