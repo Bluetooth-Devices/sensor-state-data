@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v2.18.0 (2023-10-20)
+
+### Feature
+
+* Allow name to be None ([#59](https://github.com/Bluetooth-Devices/sensor-state-data/issues/59)) ([`d321c31`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/d321c3196514a5a518340fe27e86b02b48bd87e3))
+
 ## v2.17.1 (2023-07-19)
 
 ### Fix
