@@ -11,7 +11,7 @@ from .device import DeviceKey
 class BaseValue:
 
     device_key: DeviceKey
-    name: str
+    name: str | None
 
 
 @dataclass(frozen=True)
