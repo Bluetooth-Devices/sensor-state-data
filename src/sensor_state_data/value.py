@@ -9,7 +9,6 @@ from .device import DeviceKey
 
 @dataclass(frozen=True)
 class BaseValue:
-
     device_key: DeviceKey
     name: str | None
 
