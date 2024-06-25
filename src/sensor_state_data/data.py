@@ -22,7 +22,6 @@ _PRECISION_SENTINEL = -1
 
 @dataclasses.dataclass(frozen=False)
 class SensorDeviceInfo:
-
     name: str | None
     model: str | None
     manufacturer: str | None
@@ -32,7 +31,6 @@ class SensorDeviceInfo:
 
 @dataclasses.dataclass(frozen=True)
 class SensorUpdate:
-
     title: str | None
     devices: dict[str | None, SensorDeviceInfo]
     entity_descriptions: dict[DeviceKey, SensorDescription] = dataclasses.field(
@@ -41,9 +39,9 @@ class SensorUpdate:
     entity_values: dict[DeviceKey, SensorValue] = dataclasses.field(
         default_factory=dict
     )
-    binary_entity_descriptions: dict[
-        DeviceKey, BinarySensorDescription
-    ] = dataclasses.field(default_factory=dict)
+    binary_entity_descriptions: dict[DeviceKey, BinarySensorDescription] = (
+        dataclasses.field(default_factory=dict)
+    )
     binary_entity_values: dict[DeviceKey, BinarySensorValue] = dataclasses.field(
         default_factory=dict
     )
