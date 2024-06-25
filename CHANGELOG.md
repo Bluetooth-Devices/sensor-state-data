@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v2.18.1 (2024-06-25)
+
+### Fix
+
+* Fix license classifier ([#61](https://github.com/Bluetooth-Devices/sensor-state-data/issues/61)) ([`135d7ff`](https://github.com/Bluetooth-Devices/sensor-state-data/commit/135d7ff3e2cf0dece8cf430027d0c46a79104360))
+
 ## v2.18.0 (2023-10-20)
 
 ### Feature
