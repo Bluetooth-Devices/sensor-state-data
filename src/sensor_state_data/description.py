@@ -18,20 +18,17 @@ class BaseDescription:
 
 @dataclass(frozen=True)
 class BaseBinarySensorDescription(BaseDescription):
-
     device_class: BinarySensorDeviceClass | None = None
 
 
 @dataclass(frozen=True)
 class BaseSensorDescription(BaseDescription):
-
     device_class: SensorDeviceClass | None = None
     native_unit_of_measurement: Units | None = None
 
 
 @dataclass(frozen=True)
 class SensorDescriptionIds:
-
     device_key: DeviceKey
 
 
