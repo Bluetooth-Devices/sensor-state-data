@@ -16,6 +16,10 @@ class SensorLibrary:
         device_class=SensorDeviceClass.BATTERY,
         native_unit_of_measurement=Units.PERCENTAGE,
     )
+    CHANNEL__NONE = BaseSensorDescription(
+        device_class=SensorDeviceClass.CHANNEL,
+        native_unit_of_measurement=None,
+    )
     CONDUCTIVITY__CONDUCTIVITY = BaseSensorDescription(
         device_class=SensorDeviceClass.CONDUCTIVITY,
         native_unit_of_measurement=Units.CONDUCTIVITY,

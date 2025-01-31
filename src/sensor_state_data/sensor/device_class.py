@@ -18,6 +18,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # % of battery that is left
     BATTERY = "battery"
 
+    # Data channel (no unit)
+    CHANNEL = "channel"
+
     # ppm (parts per million) Carbon Monoxide gas concentration
     CO = "carbon_monoxide"
 
