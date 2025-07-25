@@ -144,6 +144,10 @@ class SensorLibrary:
         device_class=SensorDeviceClass.ROTATION,
         native_unit_of_measurement=Units.DEGREE,
     )
+    ROTATIONAL_SPEED__REVOLUTIONS_PER_MINUTE = BaseSensorDescription(
+        device_class=SensorDeviceClass.ROTATIONAL_SPEED,
+        native_unit_of_measurement=Units.ROTATIONAL_SPEED_REVOLUTIONS_PER_MINUTE,
+    )
     SPEED__SPEED_METERS_PER_SECOND = BaseSensorDescription(
         device_class=SensorDeviceClass.SPEED,
         native_unit_of_measurement=Units.SPEED_METERS_PER_SECOND,
