@@ -206,4 +206,4 @@ class Units(StrEnum):
     SPECIFIC_GRAVITY = "SG"
 
     # Rotational speed units
-    ROTATIONAL_SPEED_REVOLUTIONS_PER_MINUTE: Final = "rpm"
+    REVOLUTIONS_PER_MINUTE: Final = "rpm"

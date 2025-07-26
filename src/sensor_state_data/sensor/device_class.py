@@ -138,9 +138,6 @@ class SensorDeviceClass(BaseDeviceClass):
     # reactive power (var)
     REACTIVE_POWER = "reactive_power"
 
-    # rotational speed (rpm)
-    ROTATIONAL_SPEED = "rotational_speed"
-
     # signal strength (dB/dBm)
     SIGNAL_STRENGTH = "signal_strength"
 
