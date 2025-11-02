@@ -114,6 +114,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # Particulate matter <= 2.5 μm (µg/m³)
     PM25 = "pm25"
 
+    # Particulate matter <= 4 μm (µg/m³)
+    PM4 = "pm4"
+
     # Port count (no unit)
     PORT_COUNT = "port_count"
 

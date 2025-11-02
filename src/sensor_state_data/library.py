@@ -116,6 +116,10 @@ class SensorLibrary:
         device_class=SensorDeviceClass.PM25,
         native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
     )
+    PM4__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = BaseSensorDescription(
+        device_class=SensorDeviceClass.PM4,
+        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+    )
     PORT_COUNT__NONE = BaseSensorDescription(
         device_class=SensorDeviceClass.PORT_COUNT,
         native_unit_of_measurement=None,
