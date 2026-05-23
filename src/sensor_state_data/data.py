@@ -121,6 +121,7 @@ class SensorData:
         """
         if precision < 0:
             self._precision = _PRECISION_SENTINEL
+            return
         self._precision = precision
 
     def _get_device_info(self, device_id: str | None) -> SensorDeviceInfo:

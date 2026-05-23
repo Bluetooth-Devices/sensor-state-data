@@ -173,6 +173,61 @@ def test_with_precision_does_not_add_trailing_zeros():
     )
 
 
+def test_negative_precision_disables_rounding():
+    """A negative precision must disable rounding, not round to powers of ten.
+
+    Regression: ``set_precision(-2)`` previously stored ``-2`` verbatim, so
+    ``round(value, -2)`` rounded the value to the nearest hundred (e.g. 0.0).
+    Any negative precision must normalize to the sentinel and pass values through.
+    """
+
+    class MySensorData(SensorData):
+        def _start_update(self, data: Any) -> None:
+            self.set_precision(-2)
+            self.update_predefined_sensor(
+                SensorLibrary.TEMPERATURE__CELSIUS, 30.3232039
+            )
+
+    data = MySensorData()
+
+    update = data.update(b"")
+    assert update.entity_values[
+        DeviceKey(key="temperature", device_id=None)
+    ].native_value == 30.3232039
+
+
+def test_negative_precision_after_positive_precision():
+    """Switching to a negative precision turns rounding back off."""
+
+    class MySensorData(SensorData):
+        def _start_update(self, data: Any) -> None:
+            self.set_precision(2)
+            self.update_predefined_sensor(
+                SensorLibrary.TEMPERATURE__CELSIUS, 30.3232039
+            )
+            self.set_precision(-5)
+            self.update_predefined_sensor(
+                SensorLibrary.HUMIDITY__PERCENTAGE, 55.123456
+            )
+
+    data = MySensorData()
+
+    update = data.update(b"")
+    assert (
+        update.entity_values[
+            DeviceKey(key="temperature", device_id=None)
+        ].native_value
+        == 30.32
+    )
+    assert (
+        update.entity_values[
+            DeviceKey(key="humidity", device_id=None)
+        ].native_value
+        == 55.123456
+    )
+    assert data.precision == -1
+
+
 def test_event():
     update_count = 0
 
