@@ -191,9 +191,10 @@ def test_negative_precision_disables_rounding():
     data = MySensorData()
 
     update = data.update(b"")
-    assert update.entity_values[
-        DeviceKey(key="temperature", device_id=None)
-    ].native_value == 30.3232039
+    assert (
+        update.entity_values[DeviceKey(key="temperature", device_id=None)].native_value
+        == 30.3232039
+    )
 
 
 def test_negative_precision_after_positive_precision():
@@ -206,23 +207,17 @@ def test_negative_precision_after_positive_precision():
                 SensorLibrary.TEMPERATURE__CELSIUS, 30.3232039
             )
             self.set_precision(-5)
-            self.update_predefined_sensor(
-                SensorLibrary.HUMIDITY__PERCENTAGE, 55.123456
-            )
+            self.update_predefined_sensor(SensorLibrary.HUMIDITY__PERCENTAGE, 55.123456)
 
     data = MySensorData()
 
     update = data.update(b"")
     assert (
-        update.entity_values[
-            DeviceKey(key="temperature", device_id=None)
-        ].native_value
+        update.entity_values[DeviceKey(key="temperature", device_id=None)].native_value
         == 30.32
     )
     assert (
-        update.entity_values[
-            DeviceKey(key="humidity", device_id=None)
-        ].native_value
+        update.entity_values[DeviceKey(key="humidity", device_id=None)].native_value
         == 55.123456
     )
     assert data.precision == -1
