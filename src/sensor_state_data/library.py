@@ -24,6 +24,10 @@ class SensorLibrary:
         device_class=SensorDeviceClass.COUNT,
         native_unit_of_measurement=None,
     )
+    CO__CONCENTRATION_PARTS_PER_MILLION = BaseSensorDescription(
+        device_class=SensorDeviceClass.CO,
+        native_unit_of_measurement=Units.CONCENTRATION_PARTS_PER_MILLION,
+    )
     CO2__CONCENTRATION_PARTS_PER_MILLION = BaseSensorDescription(
         device_class=SensorDeviceClass.CO2,
         native_unit_of_measurement=Units.CONCENTRATION_PARTS_PER_MILLION,
@@ -100,6 +104,22 @@ class SensorLibrary:
         device_class=SensorDeviceClass.MASS_NON_STABILIZED,
         native_unit_of_measurement=Units.MASS_KILOGRAMS,
     )
+    NITROGEN_DIOXIDE__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = BaseSensorDescription(
+        device_class=SensorDeviceClass.NITROGEN_DIOXIDE,
+        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+    )
+    NITROGEN_MONOXIDE__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = BaseSensorDescription(
+        device_class=SensorDeviceClass.NITROGEN_MONOXIDE,
+        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+    )
+    NITROUS_OXIDE__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = BaseSensorDescription(
+        device_class=SensorDeviceClass.NITROUS_OXIDE,
+        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+    )
+    OZONE__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = BaseSensorDescription(
+        device_class=SensorDeviceClass.OZONE,
+        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+    )
     PACKET_ID__NONE = BaseSensorDescription(
         device_class=SensorDeviceClass.PACKET_ID,
         native_unit_of_measurement=None,
@@ -151,6 +171,10 @@ class SensorLibrary:
     SPEED__SPEED_METERS_PER_SECOND = BaseSensorDescription(
         device_class=SensorDeviceClass.SPEED,
         native_unit_of_measurement=Units.SPEED_METERS_PER_SECOND,
+    )
+    SULPHUR_DIOXIDE__CONCENTRATION_MICROGRAMS_PER_CUBIC_METER = BaseSensorDescription(
+        device_class=SensorDeviceClass.SULPHUR_DIOXIDE,
+        native_unit_of_measurement=Units.CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
     )
     TEMPERATURE__CELSIUS = BaseSensorDescription(
         device_class=SensorDeviceClass.TEMPERATURE,
