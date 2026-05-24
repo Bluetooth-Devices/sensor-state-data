@@ -187,14 +187,19 @@ class SensorData:
         )
         self._binary_sensor_values.update(self._binary_sensor_values_updates)
 
+        # Snapshot the per-update dicts. SensorUpdate is frozen, but returning
+        # the live instance dicts by reference let a later update() mutate an
+        # already-returned snapshot: the next update() clears _events_updates
+        # and reassigns value/description entries. Copy so each SensorUpdate is
+        # a stable point-in-time view.
         return SensorUpdate(
             title=self._title,
-            devices=self._device_id_info,
-            entity_descriptions=self._sensor_descriptions_updates,
-            entity_values=self._sensor_values_updates,
-            binary_entity_descriptions=self._binary_sensor_descriptions_updates,
-            binary_entity_values=self._binary_sensor_values_updates,
-            events=self._events_updates,
+            devices=dict(self._device_id_info),
+            entity_descriptions=dict(self._sensor_descriptions_updates),
+            entity_values=dict(self._sensor_values_updates),
+            binary_entity_descriptions=dict(self._binary_sensor_descriptions_updates),
+            binary_entity_values=dict(self._binary_sensor_values_updates),
+            events=dict(self._events_updates),
         )
 
     def update_predefined_binary_sensor(
