@@ -3,7 +3,7 @@ from __future__ import annotations
 import dataclasses
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass(frozen=True, slots=True)
 class DeviceKey:
     """Key for a device.
 
