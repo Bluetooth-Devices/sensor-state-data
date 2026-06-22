@@ -18,6 +18,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # % of battery that is left
     BATTERY = "battery"
 
+    # blood glucose concentration (mg/dL, mmol/L)
+    BLOOD_GLUCOSE_CONCENTRATION = "blood_glucose_concentration"
+
     # ppm (parts per million) Carbon Monoxide gas concentration
     CO = "carbon_monoxide"
 
@@ -144,6 +147,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # signal strength (dB/dBm)
     SIGNAL_STRENGTH = "signal_strength"
 
+    # sound pressure (dB, dBA)
+    SOUND_PRESSURE = "sound_pressure"
+
     # specific gravity
     SPECIFIC_GRAVITY = "specific_gravity"
 
@@ -167,6 +173,9 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # Amount of VOC (µg/m³)
     VOLATILE_ORGANIC_COMPOUNDS = "volatile_organic_compounds"
+
+    # Ratio of VOC (ppm, ppb)
+    VOLATILE_ORGANIC_COMPOUNDS_PARTS = "volatile_organic_compounds_parts"
 
     # voltage (V)
     VOLTAGE = "voltage"
