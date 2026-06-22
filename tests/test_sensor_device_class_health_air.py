@@ -8,7 +8,9 @@ from sensor_state_data import SensorDeviceClass
 
 
 def test_blood_glucose_concentration_value():
-    assert SensorDeviceClass.BLOOD_GLUCOSE_CONCENTRATION == "blood_glucose_concentration"
+    assert (
+        SensorDeviceClass.BLOOD_GLUCOSE_CONCENTRATION == "blood_glucose_concentration"
+    )
 
 
 def test_sound_pressure_value():
