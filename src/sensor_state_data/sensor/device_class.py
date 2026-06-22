@@ -15,6 +15,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # Air Quality Index
     AQI = "aqi"
 
+    # atmospheric pressure (hPa, mbar); weather-station station pressure
+    ATMOSPHERIC_PRESSURE = "atmospheric_pressure"
+
     # % of battery that is left
     BATTERY = "battery"
 
@@ -71,6 +74,9 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # impedance (Ohm)
     IMPEDANCE = "impedance"
+
+    # irradiance (W/m², BTU/(h·ft²))
+    IRRADIANCE = "irradiance"
 
     # keg size (L)
     KEG_SIZE = "keg_size"
@@ -132,6 +138,12 @@ class SensorDeviceClass(BaseDeviceClass):
     # power (W/kW)
     POWER = "power"
 
+    # accumulated precipitation (mm, in)
+    PRECIPITATION = "precipitation"
+
+    # precipitation intensity (mm/d, mm/h, in/d, in/h)
+    PRECIPITATION_INTENSITY = "precipitation_intensity"
+
     # pressure (hPa/mbar)
     PRESSURE = "pressure"
 
@@ -182,3 +194,6 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # Water (L)
     WATER = "water"
+
+    # wind speed (m/s, km/h, mph, ft/s, kn)
+    WIND_SPEED = "wind_speed"
