@@ -3,7 +3,13 @@ __version__ = "2.20.0"
 from .base import BaseDeviceClass
 from .binary_sensor.device_class import BinarySensorDeviceClass
 from .data import SensorData, SensorDeviceInfo, SensorUpdate
-from .description import BinarySensorDescription, SensorDescription
+from .description import (
+    BaseBinarySensorDescription,
+    BaseDescription,
+    BaseSensorDescription,
+    BinarySensorDescription,
+    SensorDescription,
+)
 from .device import DeviceKey
 from .device_class import DeviceClass
 from .library import SensorLibrary
@@ -12,7 +18,10 @@ from .units import Units
 from .value import BaseValue, BinarySensorValue, Event, SensorValue
 
 __all__ = [
+    "BaseBinarySensorDescription",
+    "BaseDescription",
     "BaseDeviceClass",
+    "BaseSensorDescription",
     "BaseValue",
     "BinarySensorValue",
     "BinarySensorDescription",
