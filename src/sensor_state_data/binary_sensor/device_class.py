@@ -33,6 +33,9 @@ class BinarySensorDeviceClass(BaseDeviceClass):
     # On means On, Off means Off
     GENERIC = "generic"
 
+    # On means glass breakage detected, Off means no breakage (clear)
+    GLASS_BREAK = "glass_break"
+
     # On means hot, Off means normal
     HEAT = "heat"
 
