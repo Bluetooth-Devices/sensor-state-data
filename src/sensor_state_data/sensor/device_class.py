@@ -105,7 +105,7 @@ class SensorDeviceClass(BaseDeviceClass):
     # Packet id (no unit)
     PACKET_ID = "packet_id"
 
-    # Particulate matter <= 0.1 μm (µg/m³)
+    # Particulate matter <= 1 μm (µg/m³)
     PM1 = "pm1"
 
     # Particulate matter <= 10 μm (µg/m³)
