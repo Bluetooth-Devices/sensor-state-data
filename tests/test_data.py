@@ -20,6 +20,11 @@ from sensor_state_data import (
 from sensor_state_data.description import BinarySensorDescription
 
 
+class EmptySensorData(SensorData):
+    def _start_update(self, data: Any) -> None:
+        pass
+
+
 def test_title_is_reported_in_update():
     class MySensorData(SensorData):
         def _start_update(self, data: Any) -> None:
@@ -83,7 +88,7 @@ def test_primary_device_id_is_first_registered_type():
 
 
 def test_primary_device_id_is_none_without_devices():
-    data = SensorData()
+    data = EmptySensorData()
 
     assert data.primary_device_id is None
 
@@ -112,7 +117,7 @@ def test_get_device_name_falls_back_to_type():
 
 
 def test_get_device_name_unknown_device_is_none():
-    data = SensorData()
+    data = EmptySensorData()
 
     assert data.get_device_name("missing") is None
 
