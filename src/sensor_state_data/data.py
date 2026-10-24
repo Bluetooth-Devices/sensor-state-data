@@ -191,10 +191,14 @@ class SensorData:
         # the live instance dicts by reference let a later update() mutate an
         # already-returned snapshot: the next update() clears _events_updates
         # and reassigns value/description entries. Copy so each SensorUpdate is
-        # a stable point-in-time view.
+        # a stable point-in-time view. SensorDeviceInfo is mutable (the
+        # set_device_* setters edit it in place), so copy those objects too.
         return SensorUpdate(
             title=self._title,
-            devices=dict(self._device_id_info),
+            devices={
+                device_id: dataclasses.replace(info)
+                for device_id, info in self._device_id_info.items()
+            },
             entity_descriptions=dict(self._sensor_descriptions_updates),
             entity_values=dict(self._sensor_values_updates),
             binary_entity_descriptions=dict(self._binary_sensor_descriptions_updates),

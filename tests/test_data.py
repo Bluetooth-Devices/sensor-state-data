@@ -267,3 +267,22 @@ def test_returned_update_values_are_an_immutable_snapshot():
 
     data.update(b"aa")  # temperature == 2.0; must not rewrite `first`
     assert first.entity_values[key].native_value == 4.0
+
+
+def test_returned_update_device_info_is_an_immutable_snapshot():
+    """Device info in a returned SensorUpdate must not change on a later update().
+
+    Regression guard: SensorDeviceInfo is a mutable dataclass, and the devices
+    dict was copied shallowly, so every SensorUpdate shared the same
+    SensorDeviceInfo objects and an earlier update showed the newer name.
+    """
+
+    class MySensorData(SensorData):
+        def _start_update(self, data: Any) -> None:
+            self.set_device_name(data)
+
+    data = MySensorData()
+    first = data.update("first")
+    data.update("second")  # must not rename the device in `first`
+
+    assert first.devices[None].name == "first"
