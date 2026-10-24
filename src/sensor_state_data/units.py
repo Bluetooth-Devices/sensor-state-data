@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Final
+from typing import Any, Final
 
 from .enum import StrEnum
 
@@ -109,7 +109,7 @@ class Units(StrEnum):
     MASS_GRAMS: Final = "g"
     MASS_KILOGRAMS: Final = "kg"
     MASS_MILLIGRAMS: Final = "mg"
-    MASS_MICROGRAMS: Final = "µg"
+    MASS_MICROGRAMS: Final = "μg"
 
     MASS_OUNCES: Final = "oz"
     MASS_POUNDS: Final = "lb"
@@ -118,7 +118,7 @@ class Units(StrEnum):
     OHM: Final = "ohm"
 
     # Conductivity units
-    CONDUCTIVITY: Final = "µS/cm"
+    CONDUCTIVITY: Final = "μS/cm"
 
     # Light units
     LIGHT_LUX: Final = "lx"
@@ -139,7 +139,7 @@ class Units(StrEnum):
     PRECIPITATION_INCHES_PER_HOUR: Final = "in/h"
 
     # Concentration units
-    CONCENTRATION_MICROGRAMS_PER_CUBIC_METER: Final = "µg/m³"
+    CONCENTRATION_MICROGRAMS_PER_CUBIC_METER: Final = "μg/m³"
     CONCENTRATION_MILLIGRAMS_PER_CUBIC_METER: Final = "mg/m³"
     CONCENTRATION_MICROGRAMS_PER_CUBIC_FOOT: Final = "μg/ft³"
     CONCENTRATION_PARTS_PER_CUBIC_METER: Final = "p/m³"
@@ -207,3 +207,13 @@ class Units(StrEnum):
 
     # Rotational speed units
     REVOLUTIONS_PER_MINUTE: Final = "rpm"
+
+    @classmethod
+    def _missing_(cls, value: Any) -> Units | None:
+        """Accept the legacy micro sign (U+00B5) for the micro prefix (U+03BC)."""
+        if isinstance(value, str) and "\u00b5" in value:
+            normalized = value.replace("\u00b5", "\u03bc")
+            for member in cls:
+                if member.value == normalized:
+                    return member
+        return None
