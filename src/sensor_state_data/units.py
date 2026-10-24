@@ -87,7 +87,7 @@ class Units(StrEnum):
 
     # Sound pressure units
     SOUND_PRESSURE_DB: Final = "dB"
-    SOUND_PRESSURE_WEIGHTED_DBA: Final = "dBa"
+    SOUND_PRESSURE_WEIGHTED_DBA: Final = "dBA"
 
     # Volume units
     VOLUME_LITERS: Final = "L"
@@ -100,7 +100,7 @@ class Units(StrEnum):
 
     # Volume Flow Rate units
     VOLUME_FLOW_RATE_CUBIC_METERS_PER_HOUR: Final = "m³/h"
-    VOLUME_FLOW_RATE_CUBIC_FEET_PER_MINUTE: Final = "ft³/m"
+    VOLUME_FLOW_RATE_CUBIC_FEET_PER_MINUTE: Final = "ft³/min"
 
     # Area units
     AREA_SQUARE_METERS: Final = "m²"
@@ -131,7 +131,7 @@ class Units(StrEnum):
 
     # Irradiation units
     IRRADIATION_WATTS_PER_SQUARE_METER: Final = "W/m²"
-    IRRADIATION_BTUS_PER_HOUR_SQUARE_FOOT: Final = "BTU/(h×ft²)"
+    IRRADIATION_BTUS_PER_HOUR_SQUARE_FOOT: Final = "BTU/(h⋅ft²)"
 
     # Precipitation units
     PRECIPITATION_MILLIMETERS_PER_HOUR: Final = "mm/h"
