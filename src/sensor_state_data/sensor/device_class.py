@@ -6,11 +6,17 @@ from ..base import BaseDeviceClass
 class SensorDeviceClass(BaseDeviceClass):
     """Device class for sensors."""
 
+    # absolute humidity (g/m³, mg/m³)
+    ABSOLUTE_HUMIDITY = "absolute_humidity"
+
     # acceleration (mG)
     ACCELERATION = "acceleration"
 
     # apparent power (VA)
     APPARENT_POWER = "apparent_power"
+
+    # area (m², km², ft², ac, ha, ...)
+    AREA = "area"
 
     # Air Quality Index
     AQI = "aqi"
@@ -33,6 +39,12 @@ class SensorDeviceClass(BaseDeviceClass):
     # current (A)
     CURRENT = "current"
 
+    # data rate (bit/s, kB/s, MB/s, ...)
+    DATA_RATE = "data_rate"
+
+    # data size (bit, B, kB, MB, ...)
+    DATA_SIZE = "data_size"
+
     # date (ISO8601)
     DATE = "date"
 
@@ -47,6 +59,15 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # energy (Wh, kWh, MWh)
     ENERGY = "energy"
+
+    # energy per distance (kWh/100km, Wh/km, mi/kWh, km/kWh)
+    ENERGY_DISTANCE = "energy_distance"
+
+    # stored energy (Wh, kWh, MWh, J, ...)
+    ENERGY_STORAGE = "energy_storage"
+
+    # enumeration: state is one of a fixed list of options (no unit)
+    ENUM = "enum"
 
     # Volume flow rate (m3 per hour)
     VOLUME_FLOW_RATE = "volume_flow_rate"
@@ -87,6 +108,9 @@ class SensorDeviceClass(BaseDeviceClass):
     # mass non-stabilized (kg/lbs)
     MASS_NON_STABILIZED = "mass_non_stabilized"
 
+    # weight, i.e. an object's mass (μg, mg, g, kg, oz, lb)
+    WEIGHT = "weight"
+
     # Amount of money (currency)
     MONETARY = "monetary"
 
@@ -101,6 +125,9 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # Amount of O3 (µg/m³)
     OZONE = "ozone"
+
+    # potential hydrogen, acidity/alkalinity (no unit)
+    PH = "ph"
 
     # Packet id (no unit)
     PACKET_ID = "packet_id"
@@ -138,6 +165,12 @@ class SensorDeviceClass(BaseDeviceClass):
     # rotation (°)
     ROTATION = "rotation"
 
+    # radon concentration (Bq/m³, pCi/L)
+    RADON = "radon"
+
+    # reactive energy (varh, kvarh)
+    REACTIVE_ENERGY = "reactive_energy"
+
     # reactive power (var)
     REACTIVE_POWER = "reactive_power"
 
@@ -156,11 +189,17 @@ class SensorDeviceClass(BaseDeviceClass):
     # temperature (°C/F)
     TEMPERATURE = "temperature"
 
+    # temperature difference (°C, °F, K)
+    TEMPERATURE_DELTA = "temperature_delta"
+
     # time (s)
     TIME = "time"
 
     # timestamp (ISO8601)
     TIMESTAMP = "timestamp"
+
+    # uptime: when the device last restarted (ISO8601)
+    UPTIME = "uptime"
 
     # UV index (no unit)
     UV_INDEX = "uv_index"
@@ -179,6 +218,12 @@ class SensorDeviceClass(BaseDeviceClass):
 
     # Volume start (L)
     VOLUME_START = "volume_start"
+
+    # stored volume, e.g. fuel in a tank (mL, L, m³, gal, ...)
+    VOLUME_STORAGE = "volume_storage"
+
+    # wind direction (°)
+    WIND_DIRECTION = "wind_direction"
 
     # Water (L)
     WATER = "water"
