@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import dataclasses
+
 import pytest
 
 from sensor_state_data import (
@@ -42,7 +44,7 @@ def test_instances_have_no_dict(device_key: DeviceKey) -> None:
 def test_instances_remain_frozen(device_key: DeviceKey) -> None:
     """slots=True does not break frozen immutability."""
     sensor = SensorValue(device_key=device_key, name="Temp", native_value=21.5)
-    with pytest.raises(Exception):  # FrozenInstanceError
+    with pytest.raises(dataclasses.FrozenInstanceError):
         sensor.native_value = 0  # type: ignore[misc]
 
 
