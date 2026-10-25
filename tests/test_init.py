@@ -16,13 +16,13 @@ from sensor_state_data import (
 
 
 def test_sensor_device_class():
+    assert str(DeviceClass.TEMPERATURE) == "temperature"
     assert DeviceClass.TEMPERATURE == "temperature"
-    assert str(DeviceClass.TEMPERATURE) == "temperature"  # type: ignore[unreachable]
 
 
 def test_binary_sensor_device_class():
+    assert str(BinarySensorDeviceClass.POWER) == "power"
     assert BinarySensorDeviceClass.POWER == "power"
-    assert str(BinarySensorDeviceClass.POWER) == "power"  # type: ignore[unreachable]
 
 
 def test_no_precision():

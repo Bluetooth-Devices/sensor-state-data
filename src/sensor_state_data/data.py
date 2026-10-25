@@ -96,7 +96,7 @@ class SensorData:
     def primary_device_id(self) -> str | None:
         """Return the primary device id."""
         if self._device_id_to_type:
-            return list(self._device_id_to_type)[0]
+            return next(iter(self._device_id_to_type))
         return None
 
     @property
@@ -218,7 +218,7 @@ class SensorData:
     def update_predefined_sensor(
         self,
         base_description: BaseSensorDescription,
-        native_value: None | str | int | float | date | datetime | Decimal,
+        native_value: None | str | float | date | datetime | Decimal,
         key: str | None = None,
         name: str | None = None,
         device_id: str | None = None,
@@ -268,7 +268,7 @@ class SensorData:
         self,
         key: str,
         native_unit_of_measurement: Units | None,
-        native_value: None | str | int | float | date | datetime | Decimal,
+        native_value: None | str | float | date | datetime | Decimal,
         device_class: SensorDeviceClass | None = None,
         name: str | None = None,
         device_id: str | None = None,
