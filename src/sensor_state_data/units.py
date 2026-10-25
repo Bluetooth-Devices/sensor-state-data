@@ -25,6 +25,24 @@ class Units(StrEnum):
     ENERGY_KILO_WATT_HOUR: Final = "kWh"
     ENERGY_MEGA_WATT_HOUR: Final = "MWh"
 
+    # Reactive energy units
+    ENERGY_VOLT_AMPERE_REACTIVE_HOUR: Final = "varh"
+    ENERGY_KILO_VOLT_AMPERE_REACTIVE_HOUR: Final = "kvarh"
+
+    # Energy distance units
+    ENERGY_DISTANCE_KILO_WATT_HOUR_PER_100_KM: Final = "kWh/100km"
+    ENERGY_DISTANCE_WATT_HOUR_PER_KM: Final = "Wh/km"
+    ENERGY_DISTANCE_MILES_PER_KILO_WATT_HOUR: Final = "mi/kWh"
+    ENERGY_DISTANCE_KM_PER_KILO_WATT_HOUR: Final = "km/kWh"
+
+    # Blood glucose concentration units
+    BLOOD_GLUCOSE_MILLIGRAMS_PER_DECILITER: Final = "mg/dL"
+    BLOOD_GLUCOSE_MILLIMOLE_PER_LITER: Final = "mmol/L"
+
+    # Radiation concentration units
+    RADIATION_BECQUEREL_PER_CUBIC_METER: Final = "Bq/m³"
+    RADIATION_PICOCURIES_PER_LITER: Final = "pCi/L"
+
     # Electric_current units
     ELECTRIC_CURRENT_MILLIAMPERE: Final = "mA"
     ELECTRIC_CURRENT_AMPERE: Final = "A"
