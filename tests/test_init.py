@@ -25,6 +25,18 @@ def test_binary_sensor_device_class():
     assert BinarySensorDeviceClass.POWER == "power"
 
 
+def test_primary_device_id():
+    class MySensorData(SensorData):
+        def _start_update(self, data: Any) -> None:
+            self.set_device_type("Primary", device_id="a")
+            self.set_device_type("Secondary", device_id="b")
+
+    sensor_data = MySensorData()
+    assert sensor_data.primary_device_id is None
+    sensor_data.update(None)
+    assert sensor_data.primary_device_id == "a"
+
+
 def test_no_precision():
     class MySensorData(SensorData):
         def _start_update(self, data: Any) -> None:
