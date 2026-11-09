@@ -14,9 +14,9 @@ from .value import BaseValue, BinarySensorValue, Event, SensorValue
 __all__ = [
     "BaseDeviceClass",
     "BaseValue",
-    "BinarySensorValue",
     "BinarySensorDescription",
     "BinarySensorDeviceClass",
+    "BinarySensorValue",
     "DeviceClass",
     "DeviceKey",
     "Event",
